@@ -458,7 +458,6 @@
         <!--Hits-->
         <scene sceneID="3tK-cf-JiT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eGd-5X-PKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Hits" id="yeU-62-mtq" customClass="HitsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0tC-aV-kMk"/>
@@ -502,6 +501,7 @@
                         <outlet property="offHitsLabelCount" destination="uts-O3-p3o" id="KYq-CE-Npu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGd-5X-PKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1011" y="380"/>
         </scene>
