@@ -7,13 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import <Parse/Parse.h>
 
-@interface Hits : NSObject
+@interface Event : NSObject
 
-@property PFObject *hits;
-
-
+@property PFObject *Event;
 
 @end

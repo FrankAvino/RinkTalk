@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewGameStartedViewController : UIViewController
+@interface EventsListViewController : UIViewController
 
 @end

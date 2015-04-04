@@ -1,588 +1,217 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pig-hS-TTv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dtP-jN-2CL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Power Play View Controller-->
-        <scene sceneID="na9-NT-N6E">
+        <!--Games-->
+        <scene sceneID="CUl-6E-pgL">
             <objects>
-                <viewController id="WKV-sH-GVP" customClass="PowerPlayViewController" sceneMemberID="viewController">
+                <viewController id="K0h-aL-XvD" customClass="GamesListViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bz9-u9-sk4"/>
-                        <viewControllerLayoutGuide type="bottom" id="xgm-J9-0Nz"/>
+                        <viewControllerLayoutGuide type="top" id="AKz-J8-JcB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kfs-9O-fab"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="usT-J6-zkU">
+                    <view key="view" contentMode="scaleToFill" id="hTJ-ZM-guF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-gE-jmU">
-                                <rect key="frame" x="16" y="72" width="38" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
-                                <size key="titleShadowOffset" width="-1" height="-1"/>
-                                <state key="normal" title="Undo">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppz-uK-7sI">
+                                <rect key="frame" x="220" y="192" width="161" height="30"/>
+                                <state key="normal" title="Sibley @ South St. Paul">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="74" height="39"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-lJ-PR1">
-                                <rect key="frame" x="117" y="238" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Power Play Pass">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="54" y="268" width="293" height="64"/>
-                                </variation>
                                 <connections>
-                                    <action selector="recordOffenseHit:" destination="yeU-62-mtq" eventType="touchUpInside" id="E3c-ma-Jke"/>
-                                    <action selector="recordPowerPlayPass:" destination="WKV-sH-GVP" eventType="touchUpInside" id="JSv-jg-820"/>
+                                    <segue destination="clG-bU-95I" kind="show" id="RCj-dl-GI8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-Ei-h0Q">
+                                <rect key="frame" x="230" y="154" width="141" height="30"/>
+                                <state key="normal" title="St. Viator @ Caramel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="clG-bU-95I" kind="show" id="XeJ-O3-6Oh"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="EzG-gE-jmU"/>
-                                <exclude reference="wNI-lJ-PR1"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="EzG-gE-jmU"/>
-                                <include reference="wNI-lJ-PR1"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="90" id="86H-Gg-wL0"/>
+                            <constraint firstAttribute="centerX" secondItem="ppz-uK-7sI" secondAttribute="centerX" id="Cso-5U-uWI"/>
+                            <constraint firstItem="ppz-uK-7sI" firstAttribute="top" secondItem="DbL-Ei-h0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="TrV-oq-7TY"/>
+                            <constraint firstAttribute="centerX" secondItem="DbL-Ei-h0Q" secondAttribute="centerX" id="cQr-Ht-uCf"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Games" id="Jxb-eJ-V6O"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DnM-Q2-LOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNC-8Y-Y3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1768.5" y="-148"/>
+            <point key="canvasLocation" x="-567" y="-42"/>
         </scene>
-        <!--New Game Started View Controller-->
-        <scene sceneID="NQ3-hO-lD3">
+        <!--Events List View Controller-->
+        <scene sceneID="VNx-9S-fQi">
             <objects>
-                <viewController id="CF4-og-cWB" customClass="NewGameStartedViewController" sceneMemberID="viewController">
+                <viewController id="IAB-Ux-VHm" customClass="EventsListViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qh6-U7-X2y"/>
-                        <viewControllerLayoutGuide type="bottom" id="yD3-nB-Cst"/>
+                        <viewControllerLayoutGuide type="top" id="OW0-kS-UKB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ytt-Eb-R1C"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lS1-YN-fqC">
+                    <view key="view" contentMode="scaleToFill" id="RsD-M6-7D9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xo4-Kd-gfe">
-                                <rect key="frame" x="16" y="310" width="222" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="zkS-1h-uoT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-le-YuS">
+                                <rect key="frame" x="267" y="187" width="68" height="30"/>
                                 <state key="normal" title="Turnovers">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="zkS-1h-uoT"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="zkS-1h-uoT"/>
-                                    </mask>
-                                </variation>
                                 <connections>
-                                    <segue destination="Tr2-zg-LtW" kind="show" id="ZfA-4f-Nwb"/>
+                                    <segue destination="8kJ-H8-QL2" kind="show" id="53F-J5-exQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1P-Og-bad">
-                                <rect key="frame" x="16" y="310" width="222" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Penalty Kill">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZI-oF-V2y">
+                                <rect key="frame" x="266" y="225" width="68" height="30"/>
+                                <state key="normal" title="Penalties">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9RN-7G-pS8" kind="show" id="2db-jF-sdp"/>
+                                    <segue destination="8kJ-H8-QL2" kind="show" id="Jas-DW-93k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTl-tI-N6G">
-                                <rect key="frame" x="16" y="310" width="222" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Breakout">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BPD-kH-YyN" kind="show" id="D4W-0r-GEO"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RinkTalk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSP-XI-kAz">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="54"/>
-                                <color key="textColor" red="0.97254901960784312" green="0.16078431372549021" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect statistics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCs-G1-Pnx">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="cAX-VW-dP6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
-                                <color key="textColor" red="0.91764705882352937" green="0.15294117647058825" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="cAX-VW-dP6"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="cAX-VW-dP6"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54q-om-Kkf">
-                                <rect key="frame" x="36" y="199" width="182" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="sOZ-7u-hpm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xW-qf-dxt">
+                                <rect key="frame" x="266" y="149" width="68" height="30"/>
                                 <state key="normal" title="Hits">
-                                    <color key="titleColor" red="0.36078431372549019" green="0.68235294117647061" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="sOZ-7u-hpm"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="sOZ-7u-hpm"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="yeU-62-mtq" kind="show" identifier="OffensiveHitSegue" id="SIb-iV-THV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efr-X4-LRV">
-                                <rect key="frame" x="16" y="310" width="222" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Power Play">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="WKV-sH-GVP" kind="show" id="cEh-Un-QQU"/>
+                                    <segue destination="8kJ-H8-QL2" kind="show" id="aqj-Hg-gHT"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.12941176470588237" green="0.18431372549019609" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.36078431372549019" green="0.68235294117647061" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XTl-tI-N6G" firstAttribute="top" secondItem="E1P-Og-bad" secondAttribute="bottom" constant="21" id="3mg-d7-oyf"/>
-                            <constraint firstItem="E1P-Og-bad" firstAttribute="top" secondItem="efr-X4-LRV" secondAttribute="bottom" constant="21" id="5rm-3a-oFZ"/>
-                            <constraint firstItem="kCs-G1-Pnx" firstAttribute="centerX" secondItem="54q-om-Kkf" secondAttribute="centerX" id="628-Rf-rBa"/>
-                            <constraint firstItem="kCs-G1-Pnx" firstAttribute="centerX" secondItem="lS1-YN-fqC" secondAttribute="centerX" id="7Kg-SQ-WGe"/>
-                            <constraint firstItem="XTl-tI-N6G" firstAttribute="trailing" secondItem="E1P-Og-bad" secondAttribute="trailing" id="9gB-V7-CMH"/>
-                            <constraint firstItem="efr-X4-LRV" firstAttribute="trailing" secondItem="E1P-Og-bad" secondAttribute="trailing" id="Ara-Tn-qJJ"/>
-                            <constraint firstItem="Xo4-Kd-gfe" firstAttribute="top" secondItem="54q-om-Kkf" secondAttribute="bottom" constant="24" id="EoE-tv-W7W"/>
-                            <constraint firstItem="Xo4-Kd-gfe" firstAttribute="leading" secondItem="54q-om-Kkf" secondAttribute="leading" id="HSq-Mm-3lJ"/>
-                            <constraint firstItem="E1P-Og-bad" firstAttribute="leading" secondItem="XTl-tI-N6G" secondAttribute="leading" id="LCy-hy-IM8"/>
-                            <constraint firstItem="54q-om-Kkf" firstAttribute="leading" secondItem="lS1-YN-fqC" secondAttribute="leadingMargin" constant="84" id="LLh-dX-byo"/>
-                            <constraint firstItem="54q-om-Kkf" firstAttribute="trailing" secondItem="Xo4-Kd-gfe" secondAttribute="trailing" id="PfV-VU-jkT"/>
-                            <constraint firstItem="hSP-XI-kAz" firstAttribute="top" secondItem="Qh6-U7-X2y" secondAttribute="bottom" constant="35" id="UF4-YX-QQ5"/>
-                            <constraint firstItem="efr-X4-LRV" firstAttribute="leading" secondItem="E1P-Og-bad" secondAttribute="leading" id="VEe-tU-pUs"/>
-                            <constraint firstItem="kCs-G1-Pnx" firstAttribute="top" secondItem="Qh6-U7-X2y" secondAttribute="bottom" constant="88" id="XZX-hA-9Uq"/>
-                            <constraint firstItem="Xo4-Kd-gfe" firstAttribute="leading" secondItem="efr-X4-LRV" secondAttribute="leading" id="Ybq-KK-cRu"/>
-                            <constraint firstItem="efr-X4-LRV" firstAttribute="top" secondItem="Xo4-Kd-gfe" secondAttribute="bottom" constant="20" id="lsA-OF-Jqs"/>
-                            <constraint firstItem="hSP-XI-kAz" firstAttribute="baseline" secondItem="kCs-G1-Pnx" secondAttribute="firstBaseline" id="ohv-YD-kQK"/>
-                            <constraint firstItem="hSP-XI-kAz" firstAttribute="leading" secondItem="lS1-YN-fqC" secondAttribute="leadingMargin" constant="62" id="sUw-sW-C0X"/>
-                            <constraint firstItem="54q-om-Kkf" firstAttribute="top" secondItem="hSP-XI-kAz" secondAttribute="bottom" constant="49" id="szU-mX-TDa"/>
-                            <constraint firstItem="hSP-XI-kAz" firstAttribute="centerX" secondItem="kCs-G1-Pnx" secondAttribute="centerX" id="ui6-2G-A06"/>
-                            <constraint firstItem="54q-om-Kkf" firstAttribute="top" secondItem="kCs-G1-Pnx" secondAttribute="bottom" constant="34" id="uuy-b8-MPe"/>
-                            <constraint firstItem="efr-X4-LRV" firstAttribute="trailing" secondItem="Xo4-Kd-gfe" secondAttribute="trailing" id="xkk-oN-VOL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2xW-qf-dxt" secondAttribute="trailing" constant="202" id="0nS-Om-rno"/>
+                            <constraint firstItem="2xW-qf-dxt" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="250" id="0ns-jQ-fMY"/>
+                            <constraint firstItem="tZI-oF-V2y" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="15y-lg-Qxx"/>
+                            <constraint firstItem="2xW-qf-dxt" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="7NS-FZ-5cZ"/>
+                            <constraint firstAttribute="centerX" secondItem="2xW-qf-dxt" secondAttribute="centerX" id="7Og-q5-Srs"/>
+                            <constraint firstItem="2xW-qf-dxt" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="KyL-OV-KpG"/>
+                            <constraint firstItem="2xW-qf-dxt" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="M2T-NX-lKj"/>
+                            <constraint firstItem="tZI-oF-V2y" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="MhV-X9-SNl"/>
+                            <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="0.5" id="NeE-c8-uiZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2xW-qf-dxt" secondAttribute="trailing" constant="250" id="O3p-Kr-QSV"/>
+                            <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="85" id="S3I-zE-aX4"/>
+                            <constraint firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="-0.5" id="SIj-f3-Fie"/>
+                            <constraint firstItem="tZI-oF-V2y" firstAttribute="top" secondItem="fmq-le-YuS" secondAttribute="bottom" constant="8" symbolic="YES" id="ScL-K7-fLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tZI-oF-V2y" secondAttribute="trailing" constant="250" id="Zem-Np-TLP"/>
+                            <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="-0.5" id="cTx-W1-SzB"/>
+                            <constraint firstItem="fmq-le-YuS" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="dEJ-vY-HEg"/>
+                            <constraint firstItem="tZI-oF-V2y" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="250" id="hna-Q7-wM5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fmq-le-YuS" secondAttribute="trailing" constant="202" id="pOs-63-hjA"/>
+                            <constraint firstAttribute="centerX" secondItem="tZI-oF-V2y" secondAttribute="centerX" id="sWC-rt-FvP"/>
+                            <constraint firstItem="fmq-le-YuS" firstAttribute="top" secondItem="2xW-qf-dxt" secondAttribute="bottom" constant="8" symbolic="YES" id="tgt-tf-euo"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="E1P-Og-bad"/>
-                                <exclude reference="XTl-tI-N6G"/>
-                                <exclude reference="hSP-XI-kAz"/>
-                                <exclude reference="kCs-G1-Pnx"/>
-                                <exclude reference="efr-X4-LRV"/>
-                            </mask>
                             <mask key="constraints">
-                                <exclude reference="UF4-YX-QQ5"/>
-                                <exclude reference="ohv-YD-kQK"/>
-                                <exclude reference="sUw-sW-C0X"/>
-                                <exclude reference="ui6-2G-A06"/>
-                                <exclude reference="628-Rf-rBa"/>
-                                <exclude reference="7Kg-SQ-WGe"/>
-                                <exclude reference="XZX-hA-9Uq"/>
-                                <exclude reference="LLh-dX-byo"/>
-                                <exclude reference="PfV-VU-jkT"/>
-                                <exclude reference="szU-mX-TDa"/>
-                                <exclude reference="uuy-b8-MPe"/>
-                                <exclude reference="EoE-tv-W7W"/>
-                                <exclude reference="HSq-Mm-3lJ"/>
-                                <exclude reference="Ybq-KK-cRu"/>
-                                <exclude reference="5rm-3a-oFZ"/>
-                                <exclude reference="LCy-hy-IM8"/>
-                                <exclude reference="3mg-d7-oyf"/>
-                                <exclude reference="9gB-V7-CMH"/>
-                                <exclude reference="Ara-Tn-qJJ"/>
-                                <exclude reference="VEe-tU-pUs"/>
-                                <exclude reference="lsA-OF-Jqs"/>
-                                <exclude reference="xkk-oN-VOL"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="E1P-Og-bad"/>
-                                <include reference="XTl-tI-N6G"/>
-                                <include reference="hSP-XI-kAz"/>
-                                <include reference="kCs-G1-Pnx"/>
-                                <include reference="efr-X4-LRV"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="UF4-YX-QQ5"/>
-                                <include reference="ohv-YD-kQK"/>
-                                <include reference="sUw-sW-C0X"/>
-                                <include reference="ui6-2G-A06"/>
-                                <include reference="628-Rf-rBa"/>
-                                <include reference="7Kg-SQ-WGe"/>
-                                <include reference="XZX-hA-9Uq"/>
-                                <include reference="LLh-dX-byo"/>
-                                <include reference="PfV-VU-jkT"/>
-                                <include reference="szU-mX-TDa"/>
-                                <include reference="uuy-b8-MPe"/>
-                                <include reference="EoE-tv-W7W"/>
-                                <include reference="HSq-Mm-3lJ"/>
-                                <include reference="Ybq-KK-cRu"/>
-                                <include reference="5rm-3a-oFZ"/>
-                                <include reference="LCy-hy-IM8"/>
-                                <include reference="3mg-d7-oyf"/>
-                                <include reference="9gB-V7-CMH"/>
-                                <include reference="Ara-Tn-qJJ"/>
-                                <include reference="VEe-tU-pUs"/>
-                                <include reference="lsA-OF-Jqs"/>
-                                <include reference="xkk-oN-VOL"/>
+                                <exclude reference="0nS-Om-rno"/>
+                                <exclude reference="0ns-jQ-fMY"/>
+                                <exclude reference="7NS-FZ-5cZ"/>
+                                <exclude reference="M2T-NX-lKj"/>
+                                <exclude reference="O3p-Kr-QSV"/>
+                                <exclude reference="dEJ-vY-HEg"/>
+                                <exclude reference="pOs-63-hjA"/>
+                                <exclude reference="MhV-X9-SNl"/>
+                                <exclude reference="NeE-c8-uiZ"/>
+                                <exclude reference="Zem-Np-TLP"/>
+                                <exclude reference="cTx-W1-SzB"/>
+                                <exclude reference="hna-Q7-wM5"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="bFT-7c-UoB"/>
+                    <navigationItem key="navigationItem" id="xNW-2U-Eys"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jby-nH-uaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qv9-0B-PsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1939.5" y="724"/>
+            <point key="canvasLocation" x="1011" y="-42"/>
         </scene>
-        <!--Breakout View Controller-->
-        <scene sceneID="d4n-Bd-EV3">
+        <!--Record Event View Controller-->
+        <scene sceneID="zzc-oX-wf9">
             <objects>
-                <viewController id="BPD-kH-YyN" customClass="BreakoutViewController" sceneMemberID="viewController">
+                <viewController id="8kJ-H8-QL2" customClass="RecordEventViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XEh-i7-HDD"/>
-                        <viewControllerLayoutGuide type="bottom" id="NGw-6s-R24"/>
+                        <viewControllerLayoutGuide type="top" id="u5D-Uu-F6A"/>
+                        <viewControllerLayoutGuide type="bottom" id="6EI-u3-EvY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HRJ-4O-s14">
+                    <view key="view" contentMode="scaleToFill" id="tm4-Oi-KN5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-qJ-bLU">
-                                <rect key="frame" x="16" y="72" width="38" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
-                                <size key="titleShadowOffset" width="-1" height="-1"/>
-                                <state key="normal" title="Undo">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-LK-6dq">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <color key="backgroundColor" red="0.84843448252246989" green="0.95692106780810915" blue="1" alpha="0.82000000000000006" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Press Anywhere to Record">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="74" height="39"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU5-3B-Nfd">
-                                <rect key="frame" x="117" y="238" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Breakout start">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="202" width="286" height="64"/>
-                                </variation>
                                 <connections>
-                                    <action selector="recordOffenseHit:" destination="yeU-62-mtq" eventType="touchUpInside" id="m86-OR-zL7"/>
-                                    <action selector="startBreakout:" destination="BPD-kH-YyN" eventType="touchUpInside" id="kai-Wn-Q1K"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42U-zd-j7m">
-                                <rect key="frame" x="117" y="238" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Breakout end">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="334" width="286" height="64"/>
-                                </variation>
-                                <connections>
-                                    <action selector="endBreakout:" destination="BPD-kH-YyN" eventType="touchUpInside" id="8u4-VR-tcC"/>
-                                    <action selector="recordOffenseHit:" destination="yeU-62-mtq" eventType="touchUpInside" id="qNl-AX-GwP"/>
+                                    <action selector="recordEvent:" destination="8kJ-H8-QL2" eventType="touchUpInside" id="JRn-rZ-bBb"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="g1h-qJ-bLU"/>
-                                <exclude reference="qU5-3B-Nfd"/>
-                                <exclude reference="42U-zd-j7m"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="g1h-qJ-bLU"/>
-                                <include reference="qU5-3B-Nfd"/>
-                                <include reference="42U-zd-j7m"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="Wh0-LK-6dq" secondAttribute="bottom" id="A6j-nj-EmX"/>
+                            <constraint firstItem="Wh0-LK-6dq" firstAttribute="top" secondItem="u5D-Uu-F6A" secondAttribute="bottom" id="ZE0-Io-PMI"/>
+                            <constraint firstItem="Wh0-LK-6dq" firstAttribute="leading" secondItem="tm4-Oi-KN5" secondAttribute="leadingMargin" id="h33-fy-WcK"/>
+                            <constraint firstItem="Wh0-LK-6dq" firstAttribute="trailing" secondItem="tm4-Oi-KN5" secondAttribute="trailingMargin" id="tkB-WD-sLD"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="breakoutEndBtn" destination="42U-zd-j7m" id="hZ7-0t-Jgu"/>
-                        <outlet property="breakoutStartBtn" destination="qU5-3B-Nfd" id="aMi-ka-M8H"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="WiL-fg-crV"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vha-mz-APK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNr-mE-i7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1993.5" y="1547"/>
-        </scene>
-        <!--Turnovers View Controller-->
-        <scene sceneID="NNN-Jo-WLF">
-            <objects>
-                <viewController id="Tr2-zg-LtW" customClass="TurnoversViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mND-3T-SUJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="ioY-vF-TQ8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zWR-6y-bp0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sL-su-tFa">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="40"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Turnover">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="71" y="250" width="225" height="100"/>
-                                </variation>
-                                <connections>
-                                    <action selector="recordOffensiveTurnover:" destination="Tr2-zg-LtW" eventType="touchUpInside" id="STV-M9-wAD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLd-XA-epq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Undo">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="70" height="43"/>
-                                </variation>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of turnovers:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-FJ-9Au">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <color key="textColor" red="0.97254901959999995" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="409" width="328" height="21"/>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="3sL-su-tFa"/>
-                                <exclude reference="dLd-XA-epq"/>
-                                <exclude reference="fkC-FJ-9Au"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="3sL-su-tFa"/>
-                                <include reference="dLd-XA-epq"/>
-                                <include reference="fkC-FJ-9Au"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="offTurnoversLabelCount" destination="fkC-FJ-9Au" id="yii-wM-goe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UOf-rL-54g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2913" y="764"/>
-        </scene>
-        <!--Hits-->
-        <scene sceneID="3tK-cf-JiT">
-            <objects>
-                <viewController title="Hits" id="yeU-62-mtq" customClass="HitsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0tC-aV-kMk"/>
-                        <viewControllerLayoutGuide type="bottom" id="KFh-F1-6vY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="en5-6X-crr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kde-0T-isc">
-                                <rect key="frame" x="117" y="238" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Hit">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="111" y="236" width="179" height="64"/>
-                                </variation>
-                                <connections>
-                                    <action selector="recordOffenseHit:" destination="yeU-62-mtq" eventType="touchUpInside" id="qPD-Az-ZHJ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of hits:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uts-O3-p3o">
-                                <rect key="frame" x="75" y="402" width="259" height="21"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <color key="textColor" red="0.97254901960784312" green="0.16078431372549021" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="367" width="259" height="22"/>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <connections>
-                        <outlet property="offHitsLabelCount" destination="uts-O3-p3o" id="KYq-CE-Npu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eGd-5X-PKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1011" y="380"/>
-        </scene>
-        <!--Penalty Kill View Controller-->
-        <scene sceneID="3Rg-gX-b4r">
-            <objects>
-                <viewController id="9RN-7G-pS8" customClass="PenaltyKillViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2gz-Kk-VzG"/>
-                        <viewControllerLayoutGuide type="bottom" id="o2f-Jm-nn1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="feh-vS-Mdf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzz-5R-RqC">
-                                <rect key="frame" x="117" y="238" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Penalty Kill Icing">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="268" width="286" height="64"/>
-                                </variation>
-                                <connections>
-                                    <action selector="recordIcingPenaltyKill:" destination="9RN-7G-pS8" eventType="touchUpInside" id="iRX-Fx-V9g"/>
-                                    <action selector="recordOffenseHit:" destination="yeU-62-mtq" eventType="touchUpInside" id="wkg-W3-qhn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otx-9a-Jey">
-                                <rect key="frame" x="16" y="72" width="38" height="30"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
-                                <size key="titleShadowOffset" width="-1" height="-1"/>
-                                <state key="normal" title="Undo">
-                                    <color key="titleColor" red="0.36078431370000003" green="0.68235294120000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="74" height="39"/>
-                                </variation>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.80784313730000001" green="0.81960784310000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Rzz-5R-RqC"/>
-                                <exclude reference="otx-9a-Jey"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Rzz-5R-RqC"/>
-                                <include reference="otx-9a-Jey"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qVr-cM-wdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1141.5" y="1066"/>
+            <point key="canvasLocation" x="1697" y="-42"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="4JR-8v-dtT">
+        <scene sceneID="Tig-7f-9FE">
             <objects>
-                <navigationController id="pig-hS-TTv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Ps-ft-8rd">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dtP-jN-2CL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="au6-hI-rP3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CF4-og-cWB" kind="relationship" relationship="rootViewController" id="NMo-8Y-ogo"/>
+                        <segue destination="K0h-aL-XvD" kind="relationship" relationship="rootViewController" id="26F-lK-8lc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CjZ-rO-uOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVG-GM-Ucn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2792" y="8"/>
+            <point key="canvasLocation" x="-1379" y="-42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f7g-SZ-aMo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="clG-bU-95I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a83-E3-60y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IAB-Ux-VHm" kind="relationship" relationship="rootViewController" id="KiH-4b-pC1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQS-sv-9sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-42"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RCj-dl-GI8"/>
+        <segue reference="53F-J5-exQ"/>
+    </inferredMetricsTieBreakers>
 </document>

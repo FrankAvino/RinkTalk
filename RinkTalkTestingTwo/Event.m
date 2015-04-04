@@ -6,10 +6,7 @@
 //  Copyright (c) 2015 Frank Avino. All rights reserved.
 //
 
-#import "Hits.h"
+#import "Event.h"
 
-@implementation Hits
-
-
-
+@implementation Event
 @end

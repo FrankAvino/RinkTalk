@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC1FDE51AD0586900E77405 /* GamesListViewController.m */; };
 		C8EA13E71A7F438F00AF902A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA13E61A7F438F00AF902A /* main.m */; };
 		C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA13E91A7F438F00AF902A /* AppDelegate.m */; };
 		C8EA13F01A7F438F00AF902A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8EA13EE1A7F438F00AF902A /* Main.storyboard */; };
 		C8EA14011A7F438F00AF902A /* RinkTalkTestingTwoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA14001A7F438F00AF902A /* RinkTalkTestingTwoTests.m */; };
-		C8EA140C1A7F473900AF902A /* HitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA140B1A7F473900AF902A /* HitsViewController.m */; };
-		C8EA140F1A7F49D900AF902A /* NewGameStartedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA140E1A7F49D900AF902A /* NewGameStartedViewController.m */; };
+		C8EA140C1A7F473900AF902A /* RecordEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA140B1A7F473900AF902A /* RecordEventViewController.m */; };
+		C8EA140F1A7F49D900AF902A /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA140E1A7F49D900AF902A /* EventsListViewController.m */; };
 		C8EA14111A7F4AA300AF902A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA14101A7F4AA300AF902A /* Parse.framework */; };
 		C8EA14131A7F4AB300AF902A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA14121A7F4AB300AF902A /* Bolts.framework */; };
 		C8EA14151A7F4AD400AF902A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA14141A7F4AD400AF902A /* AudioToolbox.framework */; };
@@ -26,20 +27,9 @@
 		C8EA14251A7F4B2500AF902A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA14241A7F4B2500AF902A /* SystemConfiguration.framework */; };
 		C8EA14271A7F4B2D00AF902A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA14261A7F4B2D00AF902A /* libz.dylib */; };
 		C8EA14291A7F4B3C00AF902A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EA14281A7F4B3C00AF902A /* libsqlite3.dylib */; };
-		C8EA142C1A802BF600AF902A /* Hits.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA142B1A802BF600AF902A /* Hits.m */; };
-		C8EA14351A8044FE00AF902A /* VideoTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA14341A8044FE00AF902A /* VideoTimer.m */; };
+		C8EA142C1A802BF600AF902A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA142B1A802BF600AF902A /* Event.m */; };
 		C8EA143D1A8C149700AF902A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8EA143C1A8C149700AF902A /* Media.xcassets */; };
-		C8EA14401A8EFF5500AF902A /* TurnoversViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA143F1A8EFF5500AF902A /* TurnoversViewController.m */; };
-		C8EA144D1A91766000AF902A /* AppleGaramond-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EA14471A91766000AF902A /* AppleGaramond-Bold.ttf */; };
-		C8EA144E1A91766000AF902A /* AppleGaramond-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EA14481A91766000AF902A /* AppleGaramond-BoldItalic.ttf */; };
-		C8EA144F1A91766000AF902A /* AppleGaramond-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EA14491A91766000AF902A /* AppleGaramond-Italic.ttf */; };
-		C8EA14501A91766000AF902A /* AppleGaramond-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EA144A1A91766000AF902A /* AppleGaramond-Light.ttf */; };
-		C8EA14511A91766000AF902A /* AppleGaramond-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EA144B1A91766000AF902A /* AppleGaramond-LightItalic.ttf */; };
-		C8EA14521A91766000AF902A /* AppleGaramond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EA144C1A91766000AF902A /* AppleGaramond.ttf */; };
 		C8EA14571A966CE900AF902A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EA14561A966CE900AF902A /* Launch Screen.xib */; };
-		C8EA145C1AA58E1200AF902A /* PowerPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA145B1AA58E1200AF902A /* PowerPlayViewController.m */; };
-		C8EA145F1AA58E2200AF902A /* PenaltyKillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA145E1AA58E2200AF902A /* PenaltyKillViewController.m */; };
-		C8EA14621AA58E3000AF902A /* BreakoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA14611AA58E3000AF902A /* BreakoutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAC1FDE41AD0586900E77405 /* GamesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesListViewController.h; sourceTree = "<group>"; };
+		BAC1FDE51AD0586900E77405 /* GamesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesListViewController.m; sourceTree = "<group>"; };
 		C8EA13E11A7F438F00AF902A /* RinkTalkTestingTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RinkTalkTestingTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EA13E51A7F438F00AF902A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8EA13E61A7F438F00AF902A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,10 +54,10 @@
 		C8EA13FA1A7F438F00AF902A /* RinkTalkTestingTwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RinkTalkTestingTwoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EA13FF1A7F438F00AF902A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8EA14001A7F438F00AF902A /* RinkTalkTestingTwoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RinkTalkTestingTwoTests.m; sourceTree = "<group>"; };
-		C8EA140A1A7F473900AF902A /* HitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitsViewController.h; sourceTree = "<group>"; };
-		C8EA140B1A7F473900AF902A /* HitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitsViewController.m; sourceTree = "<group>"; };
-		C8EA140D1A7F49D800AF902A /* NewGameStartedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameStartedViewController.h; sourceTree = "<group>"; };
-		C8EA140E1A7F49D900AF902A /* NewGameStartedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGameStartedViewController.m; sourceTree = "<group>"; };
+		C8EA140A1A7F473900AF902A /* RecordEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordEventViewController.h; sourceTree = "<group>"; };
+		C8EA140B1A7F473900AF902A /* RecordEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordEventViewController.m; sourceTree = "<group>"; };
+		C8EA140D1A7F49D800AF902A /* EventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListViewController.h; sourceTree = "<group>"; };
+		C8EA140E1A7F49D900AF902A /* EventsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListViewController.m; sourceTree = "<group>"; };
 		C8EA14101A7F4AA300AF902A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C8EA14121A7F4AB300AF902A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C8EA14141A7F4AD400AF902A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -79,26 +71,10 @@
 		C8EA14241A7F4B2500AF902A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C8EA14261A7F4B2D00AF902A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C8EA14281A7F4B3C00AF902A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		C8EA142A1A802BF600AF902A /* Hits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hits.h; sourceTree = "<group>"; };
-		C8EA142B1A802BF600AF902A /* Hits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hits.m; sourceTree = "<group>"; };
-		C8EA14331A8044FE00AF902A /* VideoTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTimer.h; sourceTree = "<group>"; };
-		C8EA14341A8044FE00AF902A /* VideoTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTimer.m; sourceTree = "<group>"; };
+		C8EA142A1A802BF600AF902A /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		C8EA142B1A802BF600AF902A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		C8EA143C1A8C149700AF902A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		C8EA143E1A8EFF5500AF902A /* TurnoversViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnoversViewController.h; sourceTree = "<group>"; };
-		C8EA143F1A8EFF5500AF902A /* TurnoversViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnoversViewController.m; sourceTree = "<group>"; };
-		C8EA14471A91766000AF902A /* AppleGaramond-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleGaramond-Bold.ttf"; path = "../../Downloads/apple_garamond/AppleGaramond-Bold.ttf"; sourceTree = "<group>"; };
-		C8EA14481A91766000AF902A /* AppleGaramond-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleGaramond-BoldItalic.ttf"; path = "../../Downloads/apple_garamond/AppleGaramond-BoldItalic.ttf"; sourceTree = "<group>"; };
-		C8EA14491A91766000AF902A /* AppleGaramond-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleGaramond-Italic.ttf"; path = "../../Downloads/apple_garamond/AppleGaramond-Italic.ttf"; sourceTree = "<group>"; };
-		C8EA144A1A91766000AF902A /* AppleGaramond-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleGaramond-Light.ttf"; path = "../../Downloads/apple_garamond/AppleGaramond-Light.ttf"; sourceTree = "<group>"; };
-		C8EA144B1A91766000AF902A /* AppleGaramond-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleGaramond-LightItalic.ttf"; path = "../../Downloads/apple_garamond/AppleGaramond-LightItalic.ttf"; sourceTree = "<group>"; };
-		C8EA144C1A91766000AF902A /* AppleGaramond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleGaramond.ttf; path = ../../Downloads/apple_garamond/AppleGaramond.ttf; sourceTree = "<group>"; };
 		C8EA14561A966CE900AF902A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
-		C8EA145A1AA58E1200AF902A /* PowerPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerPlayViewController.h; sourceTree = "<group>"; };
-		C8EA145B1AA58E1200AF902A /* PowerPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerPlayViewController.m; sourceTree = "<group>"; };
-		C8EA145D1AA58E2200AF902A /* PenaltyKillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenaltyKillViewController.h; sourceTree = "<group>"; };
-		C8EA145E1AA58E2200AF902A /* PenaltyKillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenaltyKillViewController.m; sourceTree = "<group>"; };
-		C8EA14601AA58E3000AF902A /* BreakoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakoutViewController.h; sourceTree = "<group>"; };
-		C8EA14611AA58E3000AF902A /* BreakoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreakoutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAC1FDE71AD0596200E77405 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C8EA140A1A7F473900AF902A /* RecordEventViewController.h */,
+				C8EA140D1A7F49D800AF902A /* EventsListViewController.h */,
+				BAC1FDE41AD0586900E77405 /* GamesListViewController.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		BAC1FDE81AD05A2600E77405 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C8EA142A1A802BF600AF902A /* Event.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		C8EA13D81A7F438F00AF902A = {
 			isa = PBXGroup;
 			children = (
@@ -157,18 +151,9 @@
 		C8EA13E31A7F438F00AF902A /* RinkTalkTestingTwo */ = {
 			isa = PBXGroup;
 			children = (
-				C8EA13E81A7F438F00AF902A /* AppDelegate.h */,
-				C8EA13E91A7F438F00AF902A /* AppDelegate.m */,
 				C8EA142E1A802C4C00AF902A /* View Controllers */,
 				C8EA13EE1A7F438F00AF902A /* Main.storyboard */,
-				C8EA145A1AA58E1200AF902A /* PowerPlayViewController.h */,
-				C8EA145B1AA58E1200AF902A /* PowerPlayViewController.m */,
-				C8EA145D1AA58E2200AF902A /* PenaltyKillViewController.h */,
-				C8EA145E1AA58E2200AF902A /* PenaltyKillViewController.m */,
-				C8EA14601AA58E3000AF902A /* BreakoutViewController.h */,
-				C8EA14611AA58E3000AF902A /* BreakoutViewController.m */,
-				C8EA142F1A802C5E00AF902A /* Model */,
-				C8EA143C1A8C149700AF902A /* Media.xcassets */,
+				C8EA142F1A802C5E00AF902A /* Models */,
 				C8EA13E41A7F438F00AF902A /* Supporting Files */,
 			);
 			path = RinkTalkTestingTwo;
@@ -177,6 +162,9 @@
 		C8EA13E41A7F438F00AF902A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C8EA143C1A8C149700AF902A /* Media.xcassets */,
+				C8EA13E81A7F438F00AF902A /* AppDelegate.h */,
+				C8EA13E91A7F438F00AF902A /* AppDelegate.m */,
 				C8EA13E51A7F438F00AF902A /* Info.plist */,
 				C8EA13E61A7F438F00AF902A /* main.m */,
 				C8EA14561A966CE900AF902A /* Launch Screen.xib */,
@@ -222,36 +210,26 @@
 		C8EA142E1A802C4C00AF902A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C8EA143E1A8EFF5500AF902A /* TurnoversViewController.h */,
-				C8EA143F1A8EFF5500AF902A /* TurnoversViewController.m */,
-				C8EA140D1A7F49D800AF902A /* NewGameStartedViewController.h */,
-				C8EA140E1A7F49D900AF902A /* NewGameStartedViewController.m */,
-				C8EA140A1A7F473900AF902A /* HitsViewController.h */,
-				C8EA140B1A7F473900AF902A /* HitsViewController.m */,
+				BAC1FDE71AD0596200E77405 /* Headers */,
+				C8EA140E1A7F49D900AF902A /* EventsListViewController.m */,
+				C8EA140B1A7F473900AF902A /* RecordEventViewController.m */,
+				BAC1FDE51AD0586900E77405 /* GamesListViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		C8EA142F1A802C5E00AF902A /* Model */ = {
+		C8EA142F1A802C5E00AF902A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C8EA14331A8044FE00AF902A /* VideoTimer.h */,
-				C8EA14341A8044FE00AF902A /* VideoTimer.m */,
-				C8EA142A1A802BF600AF902A /* Hits.h */,
-				C8EA142B1A802BF600AF902A /* Hits.m */,
+				BAC1FDE81AD05A2600E77405 /* Headers */,
+				C8EA142B1A802BF600AF902A /* Event.m */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		C8EA14531A91766A00AF902A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C8EA14471A91766000AF902A /* AppleGaramond-Bold.ttf */,
-				C8EA14481A91766000AF902A /* AppleGaramond-BoldItalic.ttf */,
-				C8EA14491A91766000AF902A /* AppleGaramond-Italic.ttf */,
-				C8EA144B1A91766000AF902A /* AppleGaramond-LightItalic.ttf */,
-				C8EA144C1A91766000AF902A /* AppleGaramond.ttf */,
-				C8EA144A1A91766000AF902A /* AppleGaramond-Light.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -336,13 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EA144D1A91766000AF902A /* AppleGaramond-Bold.ttf in Resources */,
-				C8EA144E1A91766000AF902A /* AppleGaramond-BoldItalic.ttf in Resources */,
 				C8EA14571A966CE900AF902A /* Launch Screen.xib in Resources */,
-				C8EA144F1A91766000AF902A /* AppleGaramond-Italic.ttf in Resources */,
-				C8EA14501A91766000AF902A /* AppleGaramond-Light.ttf in Resources */,
-				C8EA14511A91766000AF902A /* AppleGaramond-LightItalic.ttf in Resources */,
-				C8EA14521A91766000AF902A /* AppleGaramond.ttf in Resources */,
 				C8EA13F01A7F438F00AF902A /* Main.storyboard in Resources */,
 				C8EA143D1A8C149700AF902A /* Media.xcassets in Resources */,
 			);
@@ -362,16 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EA14401A8EFF5500AF902A /* TurnoversViewController.m in Sources */,
-				C8EA140C1A7F473900AF902A /* HitsViewController.m in Sources */,
-				C8EA145F1AA58E2200AF902A /* PenaltyKillViewController.m in Sources */,
-				C8EA142C1A802BF600AF902A /* Hits.m in Sources */,
+				C8EA140C1A7F473900AF902A /* RecordEventViewController.m in Sources */,
+				BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */,
+				C8EA142C1A802BF600AF902A /* Event.m in Sources */,
 				C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */,
 				C8EA13E71A7F438F00AF902A /* main.m in Sources */,
-				C8EA140F1A7F49D900AF902A /* NewGameStartedViewController.m in Sources */,
-				C8EA145C1AA58E1200AF902A /* PowerPlayViewController.m in Sources */,
-				C8EA14621AA58E3000AF902A /* BreakoutViewController.m in Sources */,
-				C8EA14351A8044FE00AF902A /* VideoTimer.m in Sources */,
+				C8EA140F1A7F49D900AF902A /* EventsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
