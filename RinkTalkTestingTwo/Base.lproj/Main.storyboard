@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="clG-bU-95I" kind="show" id="RCj-dl-GI8"/>
+                                    <segue destination="clG-bU-95I" kind="show" identifier="Sibley" id="RCj-dl-GI8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-Ei-h0Q">
@@ -32,19 +32,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="clG-bU-95I" kind="show" id="XeJ-O3-6Oh"/>
+                                    <segue destination="clG-bU-95I" kind="show" identifier="St. Viator" id="XeJ-O3-6Oh"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-vB-Q5g">
+                                <rect key="frame" x="290" y="126" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Y95-vB-Q5g" secondAttribute="centerX" id="31L-Hy-ShE"/>
                             <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="90" id="86H-Gg-wL0"/>
                             <constraint firstAttribute="centerX" secondItem="ppz-uK-7sI" secondAttribute="centerX" id="Cso-5U-uWI"/>
                             <constraint firstItem="ppz-uK-7sI" firstAttribute="top" secondItem="DbL-Ei-h0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="TrV-oq-7TY"/>
                             <constraint firstAttribute="centerX" secondItem="DbL-Ei-h0Q" secondAttribute="centerX" id="cQr-Ht-uCf"/>
+                            <constraint firstItem="Y95-vB-Q5g" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="62" id="nNb-yq-NHd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="Jxb-eJ-V6O"/>
+                    <connections>
+                        <outlet property="spinner" destination="Y95-vB-Q5g" id="ZXe-kP-2a2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNC-8Y-Y3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,7 +249,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RCj-dl-GI8"/>
+        <segue reference="XeJ-O3-6Oh"/>
         <segue reference="53F-J5-exQ"/>
     </inferredMetricsTieBreakers>
 </document>

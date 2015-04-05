@@ -18,14 +18,17 @@
 
 @implementation RecordEventViewController
 
+-(void) viewDidLoad{
+    NSLog(@"Ready to record %@", self.eventType);
+}
+
+
+
 - (IBAction)recordEvent:(id)sender {
     PFObject *Event = [PFObject objectWithClassName:@"Event"];
     Event[@"type"] = self.eventType;
-    
-    // TODO add these object pointers to the event data
-    //Event[@"game"] = Pointer to Parse Game
-    //Event[@"submittedBy"] = Pointer to Parse User
-    
+    Event[@"game"] = self.game;
+    //Event[@"submittedBy"] = Pointer to Parse User (get from NSUserDefaults)
     
     [Event saveInBackground];
     NSLog(@"%@ recorded", self.eventType);

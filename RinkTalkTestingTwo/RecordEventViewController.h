@@ -12,5 +12,5 @@
 @interface RecordEventViewController : UIViewController
 
 @property NSString *eventType;
-
+@property PFObject *game;
 @end

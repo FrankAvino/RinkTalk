@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 
 @interface GamesListViewController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @end
 
 @implementation GamesListViewController
@@ -18,9 +19,13 @@
 
 
 - (void)viewDidLoad{
+    // start animating spinner
+    [_spinner startAnimating];
+    
     NSDate* now = [NSDate date];
     
     // Load all the upcoming games
+    // it's async so it doesn't need to be in a different thread?
     PFQuery *query = [PFQuery queryWithClassName:@"Game"];
     [query whereKey:@"startDate" greaterThan:now];
     [query findObjectsInBackgroundWithBlock:^(NSArray *games, NSError *error) {
@@ -39,22 +44,28 @@
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
+        
+        // make spinner disappear
+        [_spinner stopAnimating];
     }];
 }
 
 
-// TODO Need to be at the location to actually enter data?
+// TODO Need to be at the location to actually enter data? maybe later
 
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIButton *button = (UIButton *)sender;
-    // TODO Save and pass selected game
-    //[[segue destinationViewController] setGame: [self.upcomingGames objectAtIndex:0]];
-    
     UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
     EventsListViewController *destViewController = (EventsListViewController* )[navController topViewController];
     destViewController.navigationItem.title = button.titleLabel.text;
+    
+    if ([[segue identifier] isEqualToString:@"St. Viator"]) {
+        destViewController.game = [self.upcomingGames objectAtIndex:0]; // pass selected game
+    }else{
+        destViewController.game = [self.upcomingGames objectAtIndex:1]; // pass selected game
+    }
 }
 
 
