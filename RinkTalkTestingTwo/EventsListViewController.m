@@ -11,13 +11,7 @@
 #import <Parse/Parse.h>
 
 @interface EventsListViewController () <UIAlertViewDelegate>
-
-@property NSString *userName;
-@property NSString *userEmail;
-
 @end
-
-
 
 @implementation EventsListViewController
 
@@ -28,7 +22,9 @@
     RecordEventViewController *destViewController = (RecordEventViewController* )[segue destinationViewController];
     destViewController.navigationItem.title = [@"Record " stringByAppendingString:button.titleLabel.text];
     
-    // TODO Pass game ID of selected game
+    // TODO Pass selected game
+    NSString *value = self.game.objectId;
+    NSLog(@"%@", value);
 }
 
 
