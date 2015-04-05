@@ -38,15 +38,24 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-vB-Q5g">
                                 <rect key="frame" x="290" y="126" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which game are you attending?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbM-uI-SgI">
+                                <rect key="frame" x="154" y="72" width="292" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Y95-vB-Q5g" secondAttribute="centerX" id="31L-Hy-ShE"/>
+                            <constraint firstAttribute="centerX" secondItem="ZbM-uI-SgI" secondAttribute="centerX" id="582-bk-VVz"/>
                             <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="90" id="86H-Gg-wL0"/>
                             <constraint firstAttribute="centerX" secondItem="ppz-uK-7sI" secondAttribute="centerX" id="Cso-5U-uWI"/>
                             <constraint firstItem="ppz-uK-7sI" firstAttribute="top" secondItem="DbL-Ei-h0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="TrV-oq-7TY"/>
+                            <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="ZbM-uI-SgI" secondAttribute="bottom" constant="8" symbolic="YES" id="aUt-80-Qt6"/>
                             <constraint firstAttribute="centerX" secondItem="DbL-Ei-h0Q" secondAttribute="centerX" id="cQr-Ht-uCf"/>
                             <constraint firstItem="Y95-vB-Q5g" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="62" id="nNb-yq-NHd"/>
+                            <constraint firstItem="ZbM-uI-SgI" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="8" symbolic="YES" id="ypP-mF-ewF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="Jxb-eJ-V6O"/>
@@ -71,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-le-YuS">
-                                <rect key="frame" x="267" y="187" width="68" height="30"/>
+                                <rect key="frame" x="266" y="187" width="68" height="30"/>
                                 <state key="normal" title="Turnovers">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -97,6 +106,12 @@
                                     <segue destination="8kJ-H8-QL2" kind="show" id="aqj-Hg-gHT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which statistic would you like to record?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pc-bo-7wO">
+                                <rect key="frame" x="115" y="72" width="372" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -108,11 +123,14 @@
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="KyL-OV-KpG"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="M2T-NX-lKj"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="MhV-X9-SNl"/>
+                            <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="6Pc-bo-7wO" secondAttribute="bottom" constant="8" symbolic="YES" id="MrD-1k-uO4"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="0.5" id="NeE-c8-uiZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2xW-qf-dxt" secondAttribute="trailing" constant="250" id="O3p-Kr-QSV"/>
+                            <constraint firstAttribute="centerX" secondItem="6Pc-bo-7wO" secondAttribute="centerX" constant="-0.5" id="QIj-Y1-Sau"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="85" id="S3I-zE-aX4"/>
-                            <constraint firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="-0.5" id="SIj-f3-Fie"/>
+                            <constraint firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" id="SIj-f3-Fie"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="top" secondItem="fmq-le-YuS" secondAttribute="bottom" constant="8" symbolic="YES" id="ScL-K7-fLh"/>
+                            <constraint firstItem="6Pc-bo-7wO" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="8" symbolic="YES" id="WoR-lO-7Fh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tZI-oF-V2y" secondAttribute="trailing" constant="250" id="Zem-Np-TLP"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="-0.5" id="cTx-W1-SzB"/>
                             <constraint firstItem="fmq-le-YuS" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="dEJ-vY-HEg"/>
