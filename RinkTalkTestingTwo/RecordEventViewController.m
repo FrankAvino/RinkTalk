@@ -19,13 +19,31 @@
 @implementation RecordEventViewController
 
 - (IBAction)recordEvent:(id)sender {
-    PFObject *Event = [PFObject objectWithClassName:@"Event"];
+    PFObject *Event = [PFUser objectWithClassName:@"Event"];
     Event[@"type"] = self.eventType;
     Event[@"game"] = self.game;
-    //Event[@"submittedBy"] = Pointer to Parse User (get from NSUserDefaults)
     
-    [Event saveInBackground];
-    NSLog(@"%@ recorded", self.eventType);
+    PFQuery *query = [PFUser query];
+    NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+    [query whereKey:@"username" equalTo:username];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *foundUsers, NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully retrieved %ld user.", foundUsers.count);
+            
+            if([foundUsers count] == 1) {
+                for (PFUser *foundUser in foundUsers) {
+                    Event[@"submittedBy"] = foundUser; // pointer to a parse User
+                }
+            }
+        }
+        else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        
+        [Event saveInBackground];
+        NSLog(@"%@ recorded", self.eventType);
+    }];
 }
 
 @end
