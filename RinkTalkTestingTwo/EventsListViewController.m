@@ -15,11 +15,6 @@
 
 @implementation EventsListViewController
 
--(void) viewDidLoad{
-    NSString *value = self.game.objectId;
-    NSLog(@"Selected game %@", value);
-}
-
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIButton *button = (UIButton *)sender;

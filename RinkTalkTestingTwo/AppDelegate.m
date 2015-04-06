@@ -26,6 +26,25 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // check for authenticated user
+    NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+    
+    if (username != nil)
+    {
+        NSLog(@"%@ is authenticated", username);
+        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+    }
+    else
+    {
+        UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
+        
+        self.window.rootViewController = navigation;
+    }
+    
+    
+    
+    
     return YES;
     
 }

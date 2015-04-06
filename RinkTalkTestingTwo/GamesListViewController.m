@@ -8,6 +8,7 @@
 
 #import "GamesListViewController.h"
 #import "EventsListViewController.h"
+#import "AppDelegate.h"
 #import <Parse/Parse.h>
 
 @interface GamesListViewController ()
@@ -17,6 +18,18 @@
 @implementation GamesListViewController
 
 
+- (IBAction)logout:(UIBarButtonItem *)sender {
+    // Delete User credential from NSUserDefaults and other data related to user
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"username"];
+    
+    AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+    
+    UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
+    appDelegateTemp.window.rootViewController = navigation;
+}
 
 - (void)viewDidLoad{
     // start animating spinner

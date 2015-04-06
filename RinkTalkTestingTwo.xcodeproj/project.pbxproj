@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FFD801AD08D87000F9508 /* LoginViewController.m */; };
+		BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */; };
 		BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC1FDE51AD0586900E77405 /* GamesListViewController.m */; };
 		C8EA13E71A7F438F00AF902A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA13E61A7F438F00AF902A /* main.m */; };
 		C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA13E91A7F438F00AF902A /* AppDelegate.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BA5FFD801AD08D87000F9508 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BA6A136E1AD1EBA900FC2429 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		BAC1FDE41AD0586900E77405 /* GamesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesListViewController.h; sourceTree = "<group>"; };
 		BAC1FDE51AD0586900E77405 /* GamesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesListViewController.m; sourceTree = "<group>"; };
 		C8EA13E11A7F438F00AF902A /* RinkTalkTestingTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RinkTalkTestingTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +117,8 @@
 		BAC1FDE71AD0596200E77405 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */,
+				BA6A136E1AD1EBA900FC2429 /* SignUpViewController.h */,
 				C8EA140A1A7F473900AF902A /* RecordEventViewController.h */,
 				C8EA140D1A7F49D800AF902A /* EventsListViewController.h */,
 				BAC1FDE41AD0586900E77405 /* GamesListViewController.h */,
@@ -171,8 +176,6 @@
 				C8EA13E51A7F438F00AF902A /* Info.plist */,
 				C8EA13E61A7F438F00AF902A /* main.m */,
 				C8EA14561A966CE900AF902A /* Launch Screen.xib */,
-				BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */,
-				BA5FFD801AD08D87000F9508 /* LoginViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -218,6 +221,8 @@
 				BAC1FDE71AD0596200E77405 /* Headers */,
 				C8EA140E1A7F49D900AF902A /* EventsListViewController.m */,
 				C8EA140B1A7F473900AF902A /* RecordEventViewController.m */,
+				BA5FFD801AD08D87000F9508 /* LoginViewController.m */,
+				BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */,
 				BAC1FDE51AD0586900E77405 /* GamesListViewController.m */,
 			);
 			name = "View Controllers";
@@ -345,6 +350,7 @@
 				C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */,
 				BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */,
 				C8EA13E71A7F438F00AF902A /* main.m in Sources */,
+				BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */,
 				C8EA140F1A7F49D900AF902A /* EventsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

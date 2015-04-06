@@ -18,12 +18,6 @@
 
 @implementation RecordEventViewController
 
--(void) viewDidLoad{
-    NSLog(@"Ready to record %@", self.eventType);
-}
-
-
-
 - (IBAction)recordEvent:(id)sender {
     PFObject *Event = [PFObject objectWithClassName:@"Event"];
     Event[@"type"] = self.eventType;
