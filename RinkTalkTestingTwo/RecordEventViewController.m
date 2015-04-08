@@ -46,4 +46,11 @@
     }];
 }
 
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UIButton *button = (UIButton *)sender;
+
+    [[segue destinationViewController] setGame: self.game]; // pass selected game
+}
+
 @end

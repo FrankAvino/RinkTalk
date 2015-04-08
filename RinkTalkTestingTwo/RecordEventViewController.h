@@ -13,4 +13,5 @@
 
 @property NSString *eventType;
 @property PFObject *game;
+@property NSMutableArray *eventsToShow;
 @end

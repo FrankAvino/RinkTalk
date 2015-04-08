@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dtP-jN-2CL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dtP-jN-2CL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -186,24 +186,75 @@
                                 <state key="normal" title="Press Anywhere to Record">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="64" width="368" height="457"/>
+                                </variation>
                                 <connections>
                                     <action selector="recordEvent:" destination="8kJ-H8-QL2" eventType="touchUpInside" id="JRn-rZ-bBb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnF-YW-4vS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="List of Recorded Events for this game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="71" y="550" width="258" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="79E-7O-aBf" kind="show" id="Dkc-7v-gJv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="Wh0-LK-6dq" secondAttribute="bottom" id="A6j-nj-EmX"/>
                             <constraint firstItem="Wh0-LK-6dq" firstAttribute="top" secondItem="u5D-Uu-F6A" secondAttribute="bottom" id="ZE0-Io-PMI"/>
                             <constraint firstItem="Wh0-LK-6dq" firstAttribute="leading" secondItem="tm4-Oi-KN5" secondAttribute="leadingMargin" id="h33-fy-WcK"/>
                             <constraint firstItem="Wh0-LK-6dq" firstAttribute="trailing" secondItem="tm4-Oi-KN5" secondAttribute="trailingMargin" id="tkB-WD-sLD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rnF-YW-4vS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rnF-YW-4vS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WiL-fg-crV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNr-mE-i7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="-42"/>
+            <point key="canvasLocation" x="1716" y="-30"/>
+        </scene>
+        <!--Game Events List Table View Controller-->
+        <scene sceneID="xu9-93-e1e">
+            <objects>
+                <tableViewController id="79E-7O-aBf" customClass="GameEventsListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="F0W-hx-Opz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListPrototypeCell" id="tJb-Hg-JYj">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tJb-Hg-JYj" id="bha-nv-JRS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="79E-7O-aBf" id="u9d-Zg-Exy"/>
+                            <outlet property="delegate" destination="79E-7O-aBf" id="gqu-Bt-VWN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ej1-6P-eqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2545.5" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tig-7f-9FE">
