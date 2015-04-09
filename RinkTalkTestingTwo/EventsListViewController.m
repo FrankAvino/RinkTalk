@@ -24,5 +24,6 @@
     destViewController.navigationItem.title = [@"Record " stringByAppendingString:button.titleLabel.text];
 }
 
+// Should we have a "wow" event?
 
 @end

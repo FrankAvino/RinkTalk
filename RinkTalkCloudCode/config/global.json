@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.0"
+  },
+  "applications": {
+    "RinkTalk": {
+      "applicationId": "k6BA02wILh0LWU04kWB1CT6HidrHkcqKSB15QxTv",
+      "masterKey": "zKomCssbmWbmiPAFIU5zsul4bZajoeqgmy3ytRxW"
+    },
+    "_default": {
+      "link": "RinkTalk"
+    }
+  }
+}
