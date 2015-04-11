@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSMutableArray *eventsToShow;
 @property (strong, nonatomic) NSMutableArray *eventTimesToShow;
+@property (strong, nonatomic) NSMutableArray *eventRecordersToShow;
 
 
 @end
@@ -23,32 +24,36 @@
 {
     [super viewDidLoad];
     self.eventsToShow = [[NSMutableArray alloc] init];
-    //self.eventTimesToShow = [[NSMutableArray alloc] init];
+    self.eventTimesToShow = [[NSMutableArray alloc] init];
+    self.eventRecordersToShow = [[NSMutableArray alloc] init];
     [self loadEvents];
 }
 
 - (void)loadEvents
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query includeKey:@"submittedBy"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             for (PFObject *object in objects) {
-                PFObject *myObject = object[@"game"];
-                if(myObject.objectId == self.game.objectId){
-                    //NSLog(@"We have found a game whose event we can display");
-                    [self.eventsToShow addObject:object[@"type"]];
-                    //[self.eventTimesToShow addObject:object[@"createdAt"]];
-                    [self.tableView reloadData];
-                    //NSLog(object[@"type"]);
+                //PFQuery *userQuery = [PFUser query];
+                
+                        PFObject *myGame = object[@"game"];
+
+                        if(myGame.objectId == self.game.objectId){
+                            //NSLog(@"We have found a game whose event we can display");
+                            [self.eventsToShow addObject:object[@"type"]];
+                            [self.eventTimesToShow addObject:object.createdAt];
                     
-                }
-                else{
+                            NSString *myUser = object[@"submittedBy"][@"username"];
+                            NSLog(@"User: %@", myUser);
+                            
+                            [self.eventRecordersToShow addObject:myUser];
+                            [self.tableView reloadData];
+                            //NSLog(object[@"type"]);
                     
-                }
+                        }
             }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
 }
@@ -72,12 +77,19 @@
     static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
+    [timeFormatter setDateFormat:@"hh:mm:ss a"];
+    [timeFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"CST"]];
+    NSString *newTime = [timeFormatter stringFromDate:[self.eventTimesToShow objectAtIndex:indexPath.row]];
+    NSLog(@"%@ , ", newTime);
+    newTime = [newTime stringByAppendingString:@" , "];
+    NSString *detailLabel = [newTime stringByAppendingString:[self.eventRecordersToShow objectAtIndex:indexPath.row]];
     // Configure the cell...
     cell.textLabel.text = [self.eventsToShow objectAtIndex:indexPath.row];
-    //cell.detailTextLabel.text = [self.eventTimesToShow objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = detailLabel;
     return cell;
 }
 @end
