@@ -43,7 +43,7 @@
     [query whereKey:@"startDate" greaterThan:now];
     [query findObjectsInBackgroundWithBlock:^(NSArray *games, NSError *error) {
         if (!error) {
-            NSLog(@"Successfully retrieved %ld games.", games.count);
+            NSLog(@"Successfully retrieved %lu games.", (unsigned long)games.count);
             self.upcomingGames = [[NSMutableArray alloc] initWithCapacity:games.count];
             
             // stores games in array self.upcomingGames

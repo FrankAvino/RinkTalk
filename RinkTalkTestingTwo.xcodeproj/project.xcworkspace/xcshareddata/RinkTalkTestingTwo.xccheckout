@@ -7,25 +7,21 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2DFFB70E-6C6B-475E-B099-A0B0A42AF9AE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>RinkTalkTestingTwo</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6EA33AB17232FAC2D10EB400172FBFC85236847A</key>
-		<string>https://github.com/FrankAvino/RinkTalk</string>
 		<key>C55259E54932C95373331701C1ED7991A5461CC0</key>
-		<string>https://github.com/FrankAvino/RinkTalk</string>
+		<string>github.com:RinkTalk/RinkTalk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RinkTalkTestingTwo.xcodeproj</string>
+	<string>RinkTalkTestingTwo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6EA33AB17232FAC2D10EB400172FBFC85236847A</key>
-		<string>../../..</string>
 		<key>C55259E54932C95373331701C1ED7991A5461CC0</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/FrankAvino/RinkTalk</string>
+	<string>github.com:RinkTalk/RinkTalk.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -36,17 +32,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6EA33AB17232FAC2D10EB400172FBFC85236847A</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>C55259E54932C95373331701C1ED7991A5461CC0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>RinkTalkTestingTwo</string>
+			<string>RinkTalk</string>
 		</dict>
 	</array>
 </dict>
