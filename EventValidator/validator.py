@@ -33,7 +33,8 @@ def main():
 		if not e1.clustered:	
 			cluster = [e1]
 			for e2 in events:
-				if e1.objectId != e2.objectId and e1.type == e2.type and not e2.clustered:
+                if e1.objectId != e2.objectId and e1.type == e2.type and not e2.clustered: # and e1.submittedBy != e2.submittedBy
+                    # removed that constraint for testing
 					if time_diff(e1,e2) <= timedelta(seconds=5.0):
 						cluster.append(e2)
 						e2.clustered = True
