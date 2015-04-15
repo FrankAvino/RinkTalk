@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2DFFB70E-6C6B-475E-B099-A0B0A42AF9AE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>RinkTalkTestingTwo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C55259E54932C95373331701C1ED7991A5461CC0</key>
 		<string>github.com:RinkTalk/RinkTalk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RinkTalkTestingTwo.xcodeproj/project.xcworkspace</string>
+	<string>RinkTalkTestingTwo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C55259E54932C95373331701C1ED7991A5461CC0</key>
