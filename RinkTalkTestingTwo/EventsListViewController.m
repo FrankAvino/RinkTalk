@@ -15,10 +15,15 @@
 
 @implementation EventsListViewController
 
+-(void)viewDidLoad{
+    self.eventTypes = [[NSMutableDictionary alloc] init];
+    [self.eventTypes setValue:@"Hit" forKey:@"Hits"];
+}
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIButton *button = (UIButton *)sender;
-    [[segue destinationViewController] setEventType: button.titleLabel.text];
+    [[segue destinationViewController] setEventType: self.eventTypes[button.titleLabel.text]];
     [[segue destinationViewController] setGame: self.game]; // pass selected game
     RecordEventViewController *destViewController = (RecordEventViewController* )[segue destinationViewController];
     destViewController.navigationItem.title = [@"Record " stringByAppendingString:button.titleLabel.text];
