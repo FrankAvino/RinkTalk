@@ -32,11 +32,11 @@
 - (void)loadEvents
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query orderByDescending:@"createdAt"];
     [query includeKey:@"submittedBy"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             for (PFObject *object in objects) {
-                //PFQuery *userQuery = [PFUser query];
                 
                         PFObject *myGame = object[@"game"];
 
@@ -46,7 +46,7 @@
                             [self.eventTimesToShow addObject:object.createdAt];
                     
                             NSString *myUser = object[@"submittedBy"][@"username"];
-                            NSLog(@"User: %@", myUser);
+                            //NSLog(@"User: %@", myUser);
                             
                             [self.eventRecordersToShow addObject:myUser];
                             [self.tableView reloadData];
@@ -84,8 +84,9 @@
     [timeFormatter setDateFormat:@"hh:mm:ss a"];
     [timeFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"CST"]];
     NSString *newTime = [timeFormatter stringFromDate:[self.eventTimesToShow objectAtIndex:indexPath.row]];
-    NSLog(@"%@ , ", newTime);
-    newTime = [newTime stringByAppendingString:@" , "];
+    //NSLog(@"%@ , ", newTime);
+    newTime = [@"Rec. " stringByAppendingString: newTime];
+    newTime = [newTime stringByAppendingString:@" by "];
     NSString *detailLabel = [newTime stringByAppendingString:[self.eventRecordersToShow objectAtIndex:indexPath.row]];
     // Configure the cell...
     cell.textLabel.text = [self.eventsToShow objectAtIndex:indexPath.row];
