@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4235711AE1762400DFD849 /* AdminLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235701AE1762400DFD849 /* AdminLoginViewController.m */; };
+		BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235731AE1789700DFD849 /* AdminViewController.m */; };
 		BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FFD801AD08D87000F9508 /* LoginViewController.m */; };
 		BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */; };
 		BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC1FDE51AD0586900E77405 /* GamesListViewController.m */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA42356F1AE1762400DFD849 /* AdminLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminLoginViewController.h; sourceTree = "<group>"; };
+		BA4235701AE1762400DFD849 /* AdminLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminLoginViewController.m; sourceTree = "<group>"; };
+		BA4235721AE1789700DFD849 /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
+		BA4235731AE1789700DFD849 /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
 		BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BA5FFD801AD08D87000F9508 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BA6A136E1AD1EBA900FC2429 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -120,12 +126,14 @@
 		BAC1FDE71AD0596200E77405 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				C82647C11AD397C600EF4081 /* GameEventsListTableViewController.h */,
-				BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */,
-				BA6A136E1AD1EBA900FC2429 /* SignUpViewController.h */,
-				C8EA140A1A7F473900AF902A /* RecordEventViewController.h */,
+				BA42356F1AE1762400DFD849 /* AdminLoginViewController.h */,
+				BA4235721AE1789700DFD849 /* AdminViewController.h */,
 				C8EA140D1A7F49D800AF902A /* EventsListViewController.h */,
+				C82647C11AD397C600EF4081 /* GameEventsListTableViewController.h */,
 				BAC1FDE41AD0586900E77405 /* GamesListViewController.h */,
+				BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */,
+				C8EA140A1A7F473900AF902A /* RecordEventViewController.h */,
+				BA6A136E1AD1EBA900FC2429 /* SignUpViewController.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -163,8 +171,8 @@
 		C8EA13E31A7F438F00AF902A /* RinkTalkTestingTwo */ = {
 			isa = PBXGroup;
 			children = (
-				C8EA142E1A802C4C00AF902A /* View Controllers */,
 				C8EA13EE1A7F438F00AF902A /* Main.storyboard */,
+				C8EA142E1A802C4C00AF902A /* View Controllers */,
 				C8EA142F1A802C5E00AF902A /* Models */,
 				C8EA13E41A7F438F00AF902A /* Supporting Files */,
 			);
@@ -223,12 +231,14 @@
 			isa = PBXGroup;
 			children = (
 				BAC1FDE71AD0596200E77405 /* Headers */,
+				BA4235701AE1762400DFD849 /* AdminLoginViewController.m */,
+				BA4235731AE1789700DFD849 /* AdminViewController.m */,
 				C8EA140E1A7F49D900AF902A /* EventsListViewController.m */,
 				C82647C21AD397C600EF4081 /* GameEventsListTableViewController.m */,
-				C8EA140B1A7F473900AF902A /* RecordEventViewController.m */,
-				BA5FFD801AD08D87000F9508 /* LoginViewController.m */,
-				BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */,
 				BAC1FDE51AD0586900E77405 /* GamesListViewController.m */,
+				BA5FFD801AD08D87000F9508 /* LoginViewController.m */,
+				C8EA140B1A7F473900AF902A /* RecordEventViewController.m */,
+				BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -354,9 +364,11 @@
 				C8EA140C1A7F473900AF902A /* RecordEventViewController.m in Sources */,
 				BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */,
 				C8EA142C1A802BF600AF902A /* Event.m in Sources */,
+				BA4235711AE1762400DFD849 /* AdminLoginViewController.m in Sources */,
 				C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */,
 				BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */,
 				C8EA13E71A7F438F00AF902A /* main.m in Sources */,
+				BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */,
 				BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */,
 				C8EA140F1A7F49D900AF902A /* EventsListViewController.m in Sources */,
 			);
@@ -486,6 +498,14 @@
 				INFOPLIST_FILE = RinkTalkTestingTwo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"icucore\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
 				VALIDATE_PRODUCT = YES;
@@ -506,6 +526,14 @@
 				INFOPLIST_FILE = RinkTalkTestingTwo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"icucore\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
 			};

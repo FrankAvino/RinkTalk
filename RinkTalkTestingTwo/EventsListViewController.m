@@ -23,13 +23,17 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIButton *button = (UIButton *)sender;
-    [[segue destinationViewController] setEventType: _eventTypes[button.titleLabel.text]];
-    [[segue destinationViewController] setGame: _game]; // pass selected game
     
-    [[segue destinationViewController] setGuestName: _guestName];
+    if (![[segue identifier] isEqualToString:@"Admin Login"]) {
+    
+        [[segue destinationViewController] setEventType: _eventTypes[button.titleLabel.text]];
+        [[segue destinationViewController] setGame: _game]; // pass selected game
+    
+        [[segue destinationViewController] setGuestName: _guestName];
 
-    RecordEventViewController *destViewController = (RecordEventViewController* )[segue destinationViewController];
-    destViewController.navigationItem.title = [@"Record " stringByAppendingString:button.titleLabel.text];
+        RecordEventViewController *destViewController = (RecordEventViewController* )[segue destinationViewController];
+        destViewController.navigationItem.title = [@"Record " stringByAppendingString:button.titleLabel.text];
+    }
     
 }
 
