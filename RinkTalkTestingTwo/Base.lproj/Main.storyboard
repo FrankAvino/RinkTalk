@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dtP-jN-2CL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dtP-jN-2CL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -345,6 +345,20 @@
                                     <segue destination="Bd3-4D-1T3" kind="show" id="bSK-3D-pvd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxR-SW-v2f">
+                                <rect key="frame" x="236" y="285" width="128" height="30"/>
+                                <state key="normal" title="Continue as Guest">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="K0h-aL-XvD" kind="show" identifier="Guest" id="kMc-cd-cv3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guest name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYa-nw-eQK">
+                                <rect key="frame" x="228" y="247" width="144" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -353,20 +367,26 @@
                             <constraint firstItem="dRD-qM-RYW" firstAttribute="top" secondItem="FDb-Nf-5SV" secondAttribute="bottom" constant="8" symbolic="YES" id="43g-Vt-VC5"/>
                             <constraint firstAttribute="centerX" secondItem="JeB-iv-0T2" secondAttribute="centerX" id="5QH-dz-wt4"/>
                             <constraint firstItem="JeB-iv-0T2" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="9BY-NM-5pU"/>
+                            <constraint firstItem="oYa-nw-eQK" firstAttribute="centerX" secondItem="ZxR-SW-v2f" secondAttribute="centerX" id="A7P-fV-u5z"/>
+                            <constraint firstItem="oYa-nw-eQK" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="BwT-kd-dfa"/>
+                            <constraint firstAttribute="centerX" secondItem="oYa-nw-eQK" secondAttribute="centerX" id="ON4-Uh-6Jh"/>
                             <constraint firstItem="FDb-Nf-5SV" firstAttribute="top" secondItem="iaV-QQ-XOn" secondAttribute="bottom" constant="8" symbolic="YES" id="Tqi-NZ-G9Z"/>
                             <constraint firstItem="iaV-QQ-XOn" firstAttribute="top" secondItem="JeB-iv-0T2" secondAttribute="bottom" constant="8" symbolic="YES" id="iyv-hu-axU"/>
                             <constraint firstItem="JeB-iv-0T2" firstAttribute="top" secondItem="1iq-iM-27B" secondAttribute="bottom" constant="8" symbolic="YES" id="m6W-bG-152"/>
+                            <constraint firstItem="oYa-nw-eQK" firstAttribute="top" secondItem="dRD-qM-RYW" secondAttribute="bottom" constant="75" id="mpj-h9-39U"/>
                             <constraint firstItem="FDb-Nf-5SV" firstAttribute="centerX" secondItem="iaV-QQ-XOn" secondAttribute="centerX" id="s8E-in-A7r"/>
+                            <constraint firstItem="ZxR-SW-v2f" firstAttribute="top" secondItem="oYa-nw-eQK" secondAttribute="bottom" constant="8" symbolic="YES" id="zWZ-on-lAF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailOrUsername" destination="JeB-iv-0T2" id="jwt-XS-zLR"/>
+                        <outlet property="guestLabel" destination="oYa-nw-eQK" id="H3h-pk-lXB"/>
                         <outlet property="password" destination="iaV-QQ-XOn" id="XOE-jB-4hm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uup-B3-KmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2183" y="18"/>
+            <point key="canvasLocation" x="-2124" y="-42"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="jgC-Hy-vhb">
@@ -459,6 +479,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="kMc-cd-cv3"/>
         <segue reference="XeJ-O3-6Oh"/>
         <segue reference="53F-J5-exQ"/>
     </inferredMetricsTieBreakers>

@@ -14,4 +14,6 @@
 @property NSString *eventType;
 @property PFObject *game;
 @property NSMutableArray *eventsToShow;
+@property PFUser *userObj;
+@property NSString *guestName;
 @end

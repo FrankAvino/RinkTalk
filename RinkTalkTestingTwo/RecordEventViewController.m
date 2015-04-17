@@ -18,10 +18,31 @@
 
 @implementation RecordEventViewController
 
+-(void)viewDidLoad{
+    if ([_guestName isEqual: [NSNull null]]){
+        PFQuery *query = [PFUser query];
+        NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+        [query whereKey:@"username" equalTo:username];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *foundUsers, NSError *error) {
+            if (!error) {
+                NSLog(@"Successfully retrieved %lu user.", (unsigned long)foundUsers.count);
+                
+                if([foundUsers count] == 1) {
+                    for (PFUser *foundUser in foundUsers) {
+                        self.userObj = foundUser;
+                    }
+                }
+            }
+            else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }
+}
 
 // TODO make this just a view and not a button, fix colors and stuff
 - (IBAction)recordEvent:(id)sender {
-    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate); // not sure if vibrate works yet, need to test on real device
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     self.recordButton.backgroundColor = [UIColor redColor];
     [self performSelector:@selector(changeback) withObject:self afterDelay:0.5];
     
@@ -29,26 +50,16 @@
     Event[@"type"] = self.eventType;
     Event[@"game"] = self.game;
     
-    PFQuery *query = [PFUser query];
-    NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
-    [query whereKey:@"username" equalTo:username];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *foundUsers, NSError *error) {
-        if (!error) {
-            NSLog(@"Successfully retrieved %lu user.", (unsigned long)foundUsers.count);
-            
-            if([foundUsers count] == 1) {
-                for (PFUser *foundUser in foundUsers) {
-                    Event[@"submittedBy"] = foundUser;
-                }
-            }
-        }
-        else {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-        
-        [Event saveInBackground];
-        NSLog(@"%@ recorded", self.eventType);
-    }];
+    if ([_guestName isEqual: [NSNull null]]){
+        Event[@"submittedBy"] = self.userObj;
+    }
+    else{
+        Event[@"guestName"] = [@"g." stringByAppendingString:_guestName];
+    }
+    
+    [Event saveInBackground];
+    NSLog(@"%@ recorded", self.eventType);
+
 }
 
 -(void)changeback{

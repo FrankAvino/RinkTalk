@@ -11,16 +11,19 @@ class Game(Object):
 
 class Event(Object):
     pass
-register("k6BA02wILh0LWU04kWB1CT6HidrHkcqKSB15QxTv", "lg985CdYU3sIaeui5M5AST3WTmRaTVodB0wSJUTS", master_key="zKomCssbmWbmiPAFIU5zsul4bZajoeqgmy3ytRxW")
 
 
 def main():
+	register("k6BA02wILh0LWU04kWB1CT6HidrHkcqKSB15QxTv", "lg985CdYU3sIaeui5M5AST3WTmRaTVodB0wSJUTS", master_key="zKomCssbmWbmiPAFIU5zsul4bZajoeqgmy3ytRxW")
+
 	# get game and related events
-	game = Game.Query.get(objectId="nIM6FMf7o5")
+	game = Game.Query.get(objectId="yYhubNzW7F") #nIM6FMf7o5
 	events = Event.Query.filter(game=game).order_by("createdAt")
 
 	# track if an event has already been clustered so we don't have to look at it again
+	print "\nEvents recorded:\n======================"
 	for e1 in events:
+		print "{}@{}".format(e1.type,e1.createdAt)
 		e1.clustered = False
 
 	valid_events = []
@@ -33,8 +36,9 @@ def main():
 		if not e1.clustered:	
 			cluster = [e1]
 			for e2 in events:
-                if e1.objectId != e2.objectId and e1.type == e2.type and not e2.clustered: # and e1.submittedBy != e2.submittedBy
-                    # removed that constraint for testing
+				# and e1.submittedBy != e2.submittedBy
+				# removed that constraint for testing
+				if e1.objectId != e2.objectId and e1.type == e2.type and not e2.clustered:
 					if time_diff(e1,e2) <= timedelta(seconds=5.0):
 						cluster.append(e2)
 						e2.clustered = True
@@ -43,9 +47,11 @@ def main():
 				valid_events.append(cluster[0]) # mark the earliest as the ground truth
 
 
+	print "\nValidated events:\n=========================="
 	for ve in valid_events:
 		print "{} @ {}: Verified {} at time {}".format(game.teams[1], game.teams[0], ve.type, ve.createdAt)
 
+	print "\n"
 
 if __name__ == "__main__":
 	main()

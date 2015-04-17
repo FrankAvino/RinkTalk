@@ -31,7 +31,7 @@
     
     if (username != nil)
     {
-        NSLog(@"%@ is authenticated", username);
+        // NSLog(@"%@ is authenticated", username);
         self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
     }
     else

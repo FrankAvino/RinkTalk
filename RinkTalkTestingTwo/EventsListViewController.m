@@ -16,17 +16,20 @@
 @implementation EventsListViewController
 
 -(void)viewDidLoad{
-    self.eventTypes = [[NSMutableDictionary alloc] init];
-    [self.eventTypes setValue:@"Hit" forKey:@"Hits"];
+    _eventTypes = [[NSMutableDictionary alloc] init];
+    [_eventTypes setValue:@"Hit" forKey:@"Hits"];
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIButton *button = (UIButton *)sender;
-    [[segue destinationViewController] setEventType: self.eventTypes[button.titleLabel.text]];
-    [[segue destinationViewController] setGame: self.game]; // pass selected game
+    [[segue destinationViewController] setEventType: _eventTypes[button.titleLabel.text]];
+    [[segue destinationViewController] setGame: _game]; // pass selected game
+    
+    [[segue destinationViewController] setGuestName: _guestName];
     RecordEventViewController *destViewController = (RecordEventViewController* )[segue destinationViewController];
     destViewController.navigationItem.title = [@"Record " stringByAppendingString:button.titleLabel.text];
+    
 }
 
 // Should we have a "wow" event?

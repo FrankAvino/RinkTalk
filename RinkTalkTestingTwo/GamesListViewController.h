@@ -10,4 +10,5 @@
 
 @interface GamesListViewController : UIViewController
 @property NSMutableArray *upcomingGames;
+@property NSString *guestName;
 @end

@@ -19,6 +19,7 @@
 
 // TODO mulitthreading
 // TODO loading symbol
+// TODO disable buttons when forms not complete
 @implementation SignUpViewController
 
 - (IBAction)completeSignUp:(UIButton *)sender {
@@ -45,7 +46,7 @@
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             [defaults setObject:user.username forKey:@"username"];
             [defaults synchronize];
-            NSLog(@"User defaults data saved");
+            // NSLog(@"User defaults data saved");
             
             AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
             appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];

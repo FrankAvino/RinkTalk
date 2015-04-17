@@ -12,4 +12,5 @@
 @interface EventsListViewController : UIViewController
 @property PFObject *game;
 @property NSMutableDictionary *eventTypes;
+@property NSString *guestName;
 @end
