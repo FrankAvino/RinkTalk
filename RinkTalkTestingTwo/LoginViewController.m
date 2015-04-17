@@ -9,16 +9,19 @@
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "GamesListViewController.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *emailOrUsername;
+@property (weak, nonatomic) IBOutlet UITextField *guestLabel;
 @end
 
 @implementation LoginViewController
 
 // TODO mulitthreading
 // TODO loading symbol
+// TODO disable buttons when forms not complete
 - (IBAction)logIn:(UIButton *)sender {
     NSString *username = self.emailOrUsername.text;
     
@@ -55,5 +58,17 @@
         }
     }];
 }
+
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    
+    if ([[segue identifier] isEqualToString:@"Guest"]) {
+        [[segue destinationViewController] setGuestName:_guestLabel.text];
+    }
+
+}
+
 
 @end

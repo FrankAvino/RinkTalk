@@ -10,6 +10,5 @@
 #import <Parse/Parse.h>
 
 @interface GameEventsListTableViewController : UITableViewController
-
 @property PFObject *game;
 @end

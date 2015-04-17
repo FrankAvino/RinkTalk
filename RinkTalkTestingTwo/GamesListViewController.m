@@ -43,12 +43,12 @@
     [query whereKey:@"startDate" greaterThan:now];
     [query findObjectsInBackgroundWithBlock:^(NSArray *games, NSError *error) {
         if (!error) {
-            NSLog(@"Successfully retrieved %lu games.", (unsigned long)games.count);
-            self.upcomingGames = [[NSMutableArray alloc] initWithCapacity:games.count];
+            // NSLog(@"Successfully retrieved %lu games.", (unsigned long)games.count);
+            _upcomingGames = [[NSMutableArray alloc] initWithCapacity:games.count];
             
             // stores games in array self.upcomingGames
             for (PFObject *game in games) {
-                [self.upcomingGames addObject: game];
+                [_upcomingGames addObject: game];
             }
             
             // Frank - do something here to display each game as a button
@@ -75,11 +75,12 @@
     destViewController.navigationItem.title = button.titleLabel.text;
     
     if ([[segue identifier] isEqualToString:@"St. Viator"]) {
-        destViewController.game = [self.upcomingGames objectAtIndex:0]; // pass selected game
-    }else{
-        destViewController.game = [self.upcomingGames objectAtIndex:1]; // pass selected game
+        destViewController.game = [_upcomingGames objectAtIndex:1]; // pass selected game
+    }
+    
+    if (![_guestName isEqual: [NSNull null]]){
+        destViewController.guestName = _guestName;
     }
 }
-
 
 @end

@@ -38,21 +38,21 @@
         if (!error) {
             for (PFObject *object in objects) {
                 
-                        PFObject *myGame = object[@"game"];
-
-                        if(myGame.objectId == self.game.objectId){
-                            //NSLog(@"We have found a game whose event we can display");
-                            [self.eventsToShow addObject:object[@"type"]];
-                            [self.eventTimesToShow addObject:object.createdAt];
+                PFObject *myGame = object[@"game"];
+                
+                if(myGame.objectId == self.game.objectId){
+                    //NSLog(@"We have found a game whose event we can display");
+                    [self.eventsToShow addObject:object[@"type"]];
+                    [self.eventTimesToShow addObject:object.createdAt];
                     
-                            NSString *myUser = object[@"submittedBy"][@"username"];
-                            //NSLog(@"User: %@", myUser);
-                            
-                            [self.eventRecordersToShow addObject:myUser];
-                            [self.tableView reloadData];
-                            //NSLog(object[@"type"]);
+                    NSString *myUser = object[@"submittedBy"][@"username"];
+                    //NSLog(@"User: %@", myUser);
                     
-                        }
+                    [self.eventRecordersToShow addObject:myUser];
+                    [self.tableView reloadData];
+                    //NSLog(object[@"type"]);
+                    
+                }
             }
         }
     }];
@@ -67,7 +67,7 @@
 {
     // Return the number of rows in the section.
     //NSLog(@"Number of rows: @%f", self.eventsToShow.count);
-
+    
     
     return [self.eventsToShow count];
 }
