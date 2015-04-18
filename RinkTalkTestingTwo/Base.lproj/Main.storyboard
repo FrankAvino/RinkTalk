@@ -46,7 +46,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-sx-Cwf">
                                 <rect key="frame" x="16" y="186" width="568" height="184"/>
-                                <mutableString key="text">Watching game film is a terrific way for players to learn from their mistakes, and for coaches to find crucial teachable moments. However, youth and high school 
+                                <string key="text">Watching game film is a terrific way for players to learn from their mistakes, and for coaches to find crucial teachable moments. However, youth and high school 
 sports programs rarely have the time to pore over an 
 entire 2+ hour event -- and definitely don't have the 
 resources to hire somebody to track them. Through 
@@ -57,7 +57,7 @@ occurs. RinkTalk collects all the data from parents over
 the course of a game which, in conjunction with the 
 game film, is used to generate a easily-navigable
 Youtube video with timestamped links to all of the
-important events in a game.</mutableString>
+important events in a game.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

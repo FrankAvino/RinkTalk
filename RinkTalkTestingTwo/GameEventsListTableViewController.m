@@ -44,9 +44,14 @@
                     //NSLog(@"We have found a game whose event we can display");
                     [self.eventsToShow addObject:object[@"type"]];
                     [self.eventTimesToShow addObject:object.createdAt];
-                    
-                    NSString *myUser = object[@"submittedBy"][@"username"];
-                    //NSLog(@"User: %@", myUser);
+                    NSString *myUser;
+                    if(object[@"submittedBy"]){
+                        myUser = object[@"submittedBy"][@"username"];
+                    }
+                    else{
+                        myUser = object[@"guestName"];
+                    }
+                        //NSLog(@"User: %@", myUser);
                     
                     [self.eventRecordersToShow addObject:myUser];
                     [self.tableView reloadData];
