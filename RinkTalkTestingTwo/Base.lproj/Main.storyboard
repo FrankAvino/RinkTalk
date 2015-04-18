@@ -44,6 +44,24 @@
                                     <segue destination="clG-bU-95I" kind="show" identifier="St. Viator" id="XeJ-O3-6Oh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-sx-Cwf">
+                                <rect key="frame" x="16" y="186" width="568" height="184"/>
+                                <mutableString key="text">Watching game film is a terrific way for players to learn from their mistakes, and for coaches to find crucial teachable moments. However, youth and high school 
+sports programs rarely have the time to pore over an 
+entire 2+ hour event -- and definitely don't have the 
+resources to hire somebody to track them. Through 
+RinkTalk, parents in the stands can contribute to the
+improvement of their children and team by making a 
+simple doubletap gesture whenever a relevant event 
+occurs. RinkTalk collects all the data from parents over 
+the course of a game which, in conjunction with the 
+game film, is used to generate a easily-navigable
+Youtube video with timestamped links to all of the
+important events in a game.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -52,12 +70,25 @@
                             <constraint firstItem="EeX-bW-6YR" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="8" symbolic="YES" id="4bn-8a-P9P"/>
                             <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="90" id="86H-Gg-wL0"/>
                             <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="EeX-bW-6YR" secondAttribute="bottom" constant="8" symbolic="YES" id="8IQ-RZ-Ztg"/>
+                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="top" secondItem="ppz-uK-7sI" secondAttribute="bottom" constant="8" symbolic="YES" id="Avc-Kf-Ddo"/>
                             <constraint firstAttribute="centerX" secondItem="ppz-uK-7sI" secondAttribute="centerX" id="Cso-5U-uWI"/>
                             <constraint firstItem="ppz-uK-7sI" firstAttribute="top" secondItem="DbL-Ei-h0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="TrV-oq-7TY"/>
+                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="leading" secondItem="hTJ-ZM-guF" secondAttribute="leadingMargin" id="bDd-sa-SUl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EeX-bW-6YR" secondAttribute="trailing" id="bHN-Yn-Gzs"/>
                             <constraint firstAttribute="centerX" secondItem="DbL-Ei-h0Q" secondAttribute="centerX" id="cQr-Ht-uCf"/>
+                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="leading" secondItem="hTJ-ZM-guF" secondAttribute="leadingMargin" id="dNW-wV-9cK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jws-sx-Cwf" secondAttribute="trailing" id="fFf-FS-xI7"/>
+                            <constraint firstItem="Kfs-9O-fab" firstAttribute="top" secondItem="Jws-sx-Cwf" secondAttribute="bottom" id="kpQ-3l-ahh"/>
+                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="trailing" secondItem="hTJ-ZM-guF" secondAttribute="trailingMargin" id="lxW-nG-Hud"/>
                             <constraint firstItem="Y95-vB-Q5g" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="62" id="nNb-yq-NHd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dNW-wV-9cK"/>
+                                <exclude reference="fFf-FS-xI7"/>
+                                <exclude reference="kpQ-3l-ahh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="Jxb-eJ-V6O">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="FnZ-2i-0qU">
@@ -72,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNC-8Y-Y3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="-42"/>
+            <point key="canvasLocation" x="-565" y="-65"/>
         </scene>
         <!--Events List View Controller-->
         <scene sceneID="VNx-9S-fQi">
@@ -119,7 +150,7 @@
                                     <segue destination="8kJ-H8-QL2" kind="show" id="Jas-DW-93k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-aW-AVU">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-aW-AVU">
                                 <rect key="frame" x="540" y="518" width="44" height="30"/>
                                 <state key="normal" title="Admin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -362,15 +393,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of hits recorded: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvA-5B-0Jb">
-                                <rect key="frame" x="0.0" y="0.0" width="233" height="21"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
-                                <color key="textColor" red="0.97254901959999995" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-LK-6dq">
+                            <button multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-LK-6dq">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098039215686274" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                 <state key="normal" title="Doubletap Anywhere to Record">
@@ -385,29 +411,50 @@
                                     <outletCollection property="gestureRecognizers" destination="N9n-FB-5FT" appends="YES" id="7es-LM-Uam"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hits recorded: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvA-5B-0Jb">
+                                <rect key="frame" x="445" y="72" width="139" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" red="0.69721230720000005" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-Wp-Crw">
+                                <rect key="frame" x="213" y="518" width="175" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="View All Recorded Events">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="79E-7O-aBf" kind="show" id="KEH-p0-3t0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="Wh0-LK-6dq" secondAttribute="bottom" id="A6j-nj-EmX"/>
+                            <constraint firstItem="IvA-5B-0Jb" firstAttribute="trailing" secondItem="tm4-Oi-KN5" secondAttribute="trailingMargin" id="JWU-uS-mbb"/>
+                            <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="C5s-Wp-Crw" secondAttribute="bottom" constant="8" symbolic="YES" id="KOI-Hq-JAG"/>
+                            <constraint firstItem="IvA-5B-0Jb" firstAttribute="top" secondItem="u5D-Uu-F6A" secondAttribute="bottom" constant="8" symbolic="YES" id="PvT-I2-OP9"/>
+                            <constraint firstAttribute="centerX" secondItem="C5s-Wp-Crw" secondAttribute="centerX" id="Q1X-zv-2Pa"/>
+                            <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="C5s-Wp-Crw" secondAttribute="bottom" constant="8" id="SoM-0b-U61"/>
                             <constraint firstItem="Wh0-LK-6dq" firstAttribute="leading" secondItem="tm4-Oi-KN5" secondAttribute="leading" id="TLe-Ej-fvF"/>
                             <constraint firstAttribute="trailing" secondItem="Wh0-LK-6dq" secondAttribute="trailing" id="YMo-GA-zlo"/>
                             <constraint firstItem="Wh0-LK-6dq" firstAttribute="top" secondItem="u5D-Uu-F6A" secondAttribute="bottom" id="ZE0-Io-PMI"/>
+                            <constraint firstAttribute="centerX" secondItem="IvA-5B-0Jb" secondAttribute="centerX" constant="-0.5" id="d8q-zP-zWR"/>
+                            <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="IvA-5B-0Jb" secondAttribute="bottom" constant="8" symbolic="YES" id="frb-U5-2JU"/>
                             <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="Wh0-LK-6dq" secondAttribute="bottom" constant="8" symbolic="YES" id="zRa-Ez-Rrl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="d8q-zP-zWR"/>
+                                <exclude reference="SoM-0b-U61"/>
+                                <exclude reference="frb-U5-2JU"/>
                                 <exclude reference="zRa-Ez-Rrl"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="WiL-fg-crV">
-                        <barButtonItem key="rightBarButtonItem" title="All Events" id="33c-Xb-SeS">
-                            <connections>
-                                <segue destination="79E-7O-aBf" kind="show" id="hXH-6P-9uR"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="WiL-fg-crV"/>
                     <connections>
                         <outlet property="hitsRecordedCount" destination="IvA-5B-0Jb" id="FrQ-xa-lqc"/>
                         <outlet property="recordButton" destination="Wh0-LK-6dq" id="noW-79-Tbg"/>
@@ -420,7 +467,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1716" y="-42"/>
+            <point key="canvasLocation" x="1716" y="-65"/>
         </scene>
         <!--Game Events List Table View Controller-->
         <scene sceneID="xu9-93-e1e">

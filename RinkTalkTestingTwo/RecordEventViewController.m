@@ -49,7 +49,7 @@
 - (IBAction)recordEvent:(id)sender {
     
     self.eventsCount++;
-    self.hitsRecordedCount.text = [NSString stringWithFormat:@"Number of hits recorded: %d", self.eventsCount];
+    self.hitsRecordedCount.text = [NSString stringWithFormat:@"Hits recorded: %d", self.eventsCount];
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
