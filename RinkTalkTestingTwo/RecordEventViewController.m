@@ -73,7 +73,8 @@
 }
 
 -(void)changeback{
-    self.recordButton.backgroundColor = [UIColor whiteColor];
+    self.recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:0.16 blue:0.31 alpha:1.0];
+    
 }
 
 #pragma mark - Navigation
