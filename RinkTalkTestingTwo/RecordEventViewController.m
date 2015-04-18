@@ -12,7 +12,9 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface RecordEventViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *hitsRecordedCount;
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
+@property int eventsCount;
 @end
 
 
@@ -38,12 +40,20 @@
             }
         }];
     }
+    
+    self.eventsCount = 0;
+    
 }
 
-// TODO make this just a view and not a button, fix colors and stuff
+// TODO make this just a view and not a button
 - (IBAction)recordEvent:(id)sender {
+    
+    self.eventsCount++;
+    self.hitsRecordedCount.text = [NSString stringWithFormat:@"Number of hits recorded: %d", self.eventsCount];
+    
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-    self.recordButton.backgroundColor = [UIColor redColor];
+    
+    self.recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:1.00 blue:0.00 alpha:1.0];
     [self performSelector:@selector(changeback) withObject:self afterDelay:0.5];
     
     PFObject *Event = [PFUser objectWithClassName:@"Event"];
@@ -63,7 +73,8 @@
 }
 
 -(void)changeback{
-    self.recordButton.backgroundColor = [UIColor whiteColor];
+    self.recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:0.16 blue:0.31 alpha:1.0];
+    
 }
 
 #pragma mark - Navigation
