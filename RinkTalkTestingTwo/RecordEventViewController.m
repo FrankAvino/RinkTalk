@@ -57,8 +57,10 @@
     [self performSelector:@selector(changeback) withObject:self afterDelay:0.5];
     
     PFObject *Event = [PFUser objectWithClassName:@"Event"];
+    
     Event[@"type"] = self.eventType;
     Event[@"game"] = self.game;
+    
     
     if ([_guestName isEqual: [NSNull null]]){
         Event[@"submittedBy"] = self.userObj;
