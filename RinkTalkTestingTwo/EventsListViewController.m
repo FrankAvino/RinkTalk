@@ -29,8 +29,9 @@
         [[segue destinationViewController] setEventType: _eventTypes[button.titleLabel.text]];
         [[segue destinationViewController] setGame: _game]; // pass selected game
     
-        NSLog(@"%@ 3", _guestName);
-        [[segue destinationViewController] setGuestName: _guestName];
+        if (_guestName){
+            [[segue destinationViewController] setGuestName: _guestName];
+        }
 
         RecordEventViewController *destViewController = (RecordEventViewController* )[segue destinationViewController];
         destViewController.navigationItem.title = [@"Record " stringByAppendingString:button.titleLabel.text];

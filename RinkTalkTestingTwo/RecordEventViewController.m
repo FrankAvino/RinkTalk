@@ -21,7 +21,7 @@
 @implementation RecordEventViewController
 
 -(void)viewDidLoad{
-    if ([_guestName isEqual: [NSNull null]]){
+    if (!_guestName){
         PFQuery *query = [PFUser query];
         NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
         [query whereKey:@"username" equalTo:username];
@@ -61,12 +61,11 @@
     Event[@"type"] = self.eventType;
     Event[@"game"] = self.game;
     
-    
-    if ([_guestName isEqual: [NSNull null]]){
+    if (!_guestName){
         Event[@"submittedBy"] = self.userObj;
     }
     else{
-        Event[@"guestName"] = [@"g." stringByAppendingString:_guestName];
+        Event[@"guestName"] = [@"(guest)" stringByAppendingString:_guestName];
     }
     
     [Event saveInBackground];

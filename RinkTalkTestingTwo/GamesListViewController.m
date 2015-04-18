@@ -40,10 +40,10 @@
     // Load all the upcoming games
     // it's async so it doesn't need to be in a different thread?
     PFQuery *query = [PFQuery queryWithClassName:@"Game"];
-    [query whereKey:@"startDate" greaterThan:now];
+    //[query whereKey:@"startDate" greaterThan:now];
     [query findObjectsInBackgroundWithBlock:^(NSArray *games, NSError *error) {
         if (!error) {
-            // NSLog(@"Successfully retrieved %lu games.", (unsigned long)games.count);
+             NSLog(@"Successfully retrieved %lu games.", (unsigned long)games.count);
             _upcomingGames = [[NSMutableArray alloc] initWithCapacity:games.count];
             
             // stores games in array self.upcomingGames
@@ -79,9 +79,10 @@
         destViewController.game = [_upcomingGames objectAtIndex:1]; // pass selected game
     }
     
-    if (![_guestName isEqual: [NSNull null]]){
+    if (_guestName){
         destViewController.guestName = _guestName;
     }
+
 }
 
 @end

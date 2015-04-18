@@ -63,9 +63,14 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    
     if ([[segue identifier] isEqualToString:@"Guest"]) {
-        [[segue destinationViewController] setGuestName:_guestLabel.text];
+        if ([_guestLabel hasText]){
+            [[segue destinationViewController] setGuestName:_guestLabel.text];
+        }
+        else{
+            [[segue destinationViewController] setGuestName:@"anonymous"];
+        }
+
     }
 
 }
