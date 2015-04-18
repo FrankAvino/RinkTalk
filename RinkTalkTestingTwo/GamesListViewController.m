@@ -74,7 +74,7 @@
     EventsListViewController *destViewController = (EventsListViewController* )[navController topViewController];
     destViewController.navigationItem.title = button.titleLabel.text;
     
-    if ([[segue identifier] isEqualToString:@"St. Viator"]) {
+    if ([[segue identifier] isEqualToString:@"Saint Viator"]) {
         destViewController.game = [_upcomingGames objectAtIndex:1]; // pass selected game
     }
     
