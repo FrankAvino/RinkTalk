@@ -81,15 +81,16 @@ def main():
 					confidence_map[len(cluster)] = 1
 				valid_events.append((cluster[0], len(cluster))) # mark the earliest as the ground truth
 
-	game_start = datetime.datetime(2015, 4, 18, 23, 58, 0)
+	game_start = datetime.datetime(2015, 4, 18, 23, 58, 46)
 	print "\nTossed out {} unconfirmed recordings.".format(len(events) - num_clustered)
 	print "\nFound {} confirmed events for {} @ {}.\n==========================".format(len(valid_events),game.teams[1], game.teams[0])
 	print "(Times relative to game start at {})\n".format(game_start)
 
 	for ve in valid_events:
-		# TODO for links in video, subtract all times by 5s to make it easier to watch?
 		# TODO use cluster sizes as confidence measure
-		print "{} @ {} (recorded by {} users)".format(ve[0].type, str(ve[0].createdAt-game_start).split('.')[0], ve[1])
+		# link should be ~2 seconds before event occurs, plus 1 second assumed delay in recording
+		leadup_delay = datetime.timedelta(seconds=3.0)
+		print "{} @ {} (recorded by {} users)".format(ve[0].type, str(ve[0].createdAt- game_start - leadup_delay).split('.')[0], ve[1])
 
 	print "\nFrequency of cluster sizes for confirmed events:\n=========================="
 	for sz in confidence_map:
