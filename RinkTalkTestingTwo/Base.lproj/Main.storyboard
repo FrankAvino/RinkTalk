@@ -588,6 +588,15 @@ important events in a game.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmU-Sj-6Qo">
+                                <rect key="frame" x="257" y="562" width="87" height="30"/>
+                                <state key="normal" title="View Tutorial">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KCR-YD-qwB" kind="presentation" id="10O-kQ-yAK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -595,9 +604,11 @@ important events in a game.</string>
                             <constraint firstItem="JeB-iv-0T2" firstAttribute="centerX" secondItem="iaV-QQ-XOn" secondAttribute="centerX" id="0yW-6C-4hK"/>
                             <constraint firstItem="dRD-qM-RYW" firstAttribute="top" secondItem="FDb-Nf-5SV" secondAttribute="bottom" constant="8" symbolic="YES" id="43g-Vt-VC5"/>
                             <constraint firstAttribute="centerX" secondItem="JeB-iv-0T2" secondAttribute="centerX" id="5QH-dz-wt4"/>
+                            <constraint firstItem="LmU-Sj-6Qo" firstAttribute="centerX" secondItem="ZxR-SW-v2f" secondAttribute="centerX" id="5zw-7a-W1E"/>
                             <constraint firstItem="JeB-iv-0T2" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="9BY-NM-5pU"/>
                             <constraint firstItem="oYa-nw-eQK" firstAttribute="centerX" secondItem="ZxR-SW-v2f" secondAttribute="centerX" id="A7P-fV-u5z"/>
                             <constraint firstItem="oYa-nw-eQK" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="BwT-kd-dfa"/>
+                            <constraint firstItem="sN4-HJ-XeI" firstAttribute="top" secondItem="LmU-Sj-6Qo" secondAttribute="bottom" constant="8" symbolic="YES" id="EP4-Kc-f0J"/>
                             <constraint firstAttribute="centerX" secondItem="oYa-nw-eQK" secondAttribute="centerX" id="ON4-Uh-6Jh"/>
                             <constraint firstItem="FDb-Nf-5SV" firstAttribute="top" secondItem="iaV-QQ-XOn" secondAttribute="bottom" constant="8" symbolic="YES" id="Tqi-NZ-G9Z"/>
                             <constraint firstItem="iaV-QQ-XOn" firstAttribute="top" secondItem="JeB-iv-0T2" secondAttribute="bottom" constant="8" symbolic="YES" id="iyv-hu-axU"/>
@@ -615,7 +626,7 @@ important events in a game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uup-B3-KmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2124" y="-42"/>
+            <point key="canvasLocation" x="-2274" y="-42"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="jgC-Hy-vhb">
@@ -686,7 +697,102 @@ important events in a game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36J-rE-JGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2124" y="773"/>
+            <point key="canvasLocation" x="-2274" y="724"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="F1i-Wu-m9q">
+            <objects>
+                <viewController id="KCR-YD-qwB" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pvP-S6-hGn"/>
+                        <viewControllerLayoutGuide type="bottom" id="b3Z-VS-J32"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XnB-Ab-rCb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-kR-9l4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2117" y="1678"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="llA-Xd-Ib7">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="oN3-HH-LPj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTR-mV-YZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1386" y="1373"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="6Hs-ue-oEM">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="ug8-wb-Ixn" customClass="PageContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jcy-oc-7fj"/>
+                        <viewControllerLayoutGuide type="bottom" id="eng-06-BZh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B6P-Tp-sEP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-n5-X4m">
+                                <rect key="frame" x="77" y="136" width="446" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="328" id="3Eu-pr-1cg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="328" id="Xg5-oI-8hU"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3Eu-pr-1cg"/>
+                                        <exclude reference="Xg5-oI-8hU"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-4b-Kzi">
+                                <rect key="frame" x="267" y="107" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1fj-RF-wmT">
+                                <rect key="frame" x="16" y="472" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="1fj-RF-wmT" secondAttribute="centerX" id="0Pf-aS-dNh"/>
+                            <constraint firstItem="1fj-RF-wmT" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" id="0Sm-Nm-c1e"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="B6P-Tp-sEP" secondAttribute="centerX" id="BNM-o7-nRJ"/>
+                            <constraint firstItem="1fj-RF-wmT" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="8" symbolic="YES" id="CDP-ly-AUO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1fj-RF-wmT" secondAttribute="trailing" id="DQ0-eb-abB"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" constant="61" id="Wre-MF-JJe"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="gYN-4b-Kzi" secondAttribute="centerX" id="bIf-jb-U4q"/>
+                            <constraint firstItem="gYN-4b-Kzi" firstAttribute="centerX" secondItem="gjQ-n5-X4m" secondAttribute="centerX" id="dbu-5I-87Z"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="top" secondItem="gYN-4b-Kzi" secondAttribute="bottom" constant="8" symbolic="YES" id="eil-pC-TFf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gjQ-n5-X4m" secondAttribute="trailing" constant="61" id="hxv-q1-7Uz"/>
+                            <constraint firstItem="eng-06-BZh" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="136" id="jRL-76-fFV"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerY" secondItem="B6P-Tp-sEP" secondAttribute="centerY" id="usw-fo-X8J"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dbu-5I-87Z"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="1fj-RF-wmT" id="WTQ-1E-M4C"/>
+                        <outlet property="tutorialImageView" destination="gjQ-n5-X4m" id="gLQ-Km-IeT"/>
+                        <outlet property="tutorialLabel" destination="gYN-4b-Kzi" id="uaU-ZF-lIm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wM9-Qb-VFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1386" y="2074"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f7g-SZ-aMo">

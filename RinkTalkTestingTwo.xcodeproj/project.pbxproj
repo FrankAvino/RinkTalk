@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA10580F1AF737BE00F2D6D5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA10580E1AF737BE00F2D6D5 /* RootViewController.m */; };
+		BA1058121AF737F500F2D6D5 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1058111AF737F500F2D6D5 /* PageContentViewController.m */; };
+		BA1058171AF742FD00F2D6D5 /* hit.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA1058161AF742FD00F2D6D5 /* hit.gif */; };
+		BA1058191AF744EC00F2D6D5 /* missed_hit.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA1058181AF744EC00F2D6D5 /* missed_hit.gif */; };
 		BA4235711AE1762400DFD849 /* AdminLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235701AE1762400DFD849 /* AdminLoginViewController.m */; };
 		BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235731AE1789700DFD849 /* AdminViewController.m */; };
 		BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FFD801AD08D87000F9508 /* LoginViewController.m */; };
@@ -48,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA10580D1AF737BE00F2D6D5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
+		BA10580E1AF737BE00F2D6D5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
+		BA1058101AF737F500F2D6D5 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		BA1058111AF737F500F2D6D5 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		BA1058161AF742FD00F2D6D5 /* hit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hit.gif; sourceTree = "<group>"; };
+		BA1058181AF744EC00F2D6D5 /* missed_hit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = missed_hit.gif; sourceTree = "<group>"; };
 		BA42356F1AE1762400DFD849 /* AdminLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminLoginViewController.h; sourceTree = "<group>"; };
 		BA4235701AE1762400DFD849 /* AdminLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminLoginViewController.m; sourceTree = "<group>"; };
 		BA4235721AE1789700DFD849 /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
@@ -172,6 +182,10 @@
 			isa = PBXGroup;
 			children = (
 				C8EA13EE1A7F438F00AF902A /* Main.storyboard */,
+				BA1058101AF737F500F2D6D5 /* PageContentViewController.h */,
+				BA1058111AF737F500F2D6D5 /* PageContentViewController.m */,
+				BA10580D1AF737BE00F2D6D5 /* RootViewController.h */,
+				BA10580E1AF737BE00F2D6D5 /* RootViewController.m */,
 				C8EA142E1A802C4C00AF902A /* View Controllers */,
 				C8EA142F1A802C5E00AF902A /* Models */,
 				C8EA13E41A7F438F00AF902A /* Supporting Files */,
@@ -182,6 +196,8 @@
 		C8EA13E41A7F438F00AF902A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA1058181AF744EC00F2D6D5 /* missed_hit.gif */,
+				BA1058161AF742FD00F2D6D5 /* hit.gif */,
 				C8EA143C1A8C149700AF902A /* Media.xcassets */,
 				C8EA13E81A7F438F00AF902A /* AppDelegate.h */,
 				C8EA13E91A7F438F00AF902A /* AppDelegate.m */,
@@ -340,8 +356,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1058191AF744EC00F2D6D5 /* missed_hit.gif in Resources */,
 				C8EA14571A966CE900AF902A /* Launch Screen.xib in Resources */,
 				C8EA13F01A7F438F00AF902A /* Main.storyboard in Resources */,
+				BA1058171AF742FD00F2D6D5 /* hit.gif in Resources */,
 				C8EA143D1A8C149700AF902A /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,11 +380,13 @@
 			files = (
 				C82647C31AD397C700EF4081 /* GameEventsListTableViewController.m in Sources */,
 				C8EA140C1A7F473900AF902A /* RecordEventViewController.m in Sources */,
+				BA10580F1AF737BE00F2D6D5 /* RootViewController.m in Sources */,
 				BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */,
 				C8EA142C1A802BF600AF902A /* Event.m in Sources */,
 				BA4235711AE1762400DFD849 /* AdminLoginViewController.m in Sources */,
 				C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */,
 				BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */,
+				BA1058121AF737F500F2D6D5 /* PageContentViewController.m in Sources */,
 				C8EA13E71A7F438F00AF902A /* main.m in Sources */,
 				BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */,
 				BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */,
@@ -489,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Henry Spindell (XXUR944447)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Henry Spindell (XXUR944447)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -508,6 +529,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
@@ -517,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Northwestern University";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Northwestern University";
 				FRAMEWORK_SEARCH_PATHS = (

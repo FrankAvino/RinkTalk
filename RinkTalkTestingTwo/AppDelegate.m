@@ -43,6 +43,12 @@
         self.window.rootViewController = navigation;
     }
     
+    // set color of navigation dots for tutorial screen
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor whiteColor];
+
     return YES;
     
 }
