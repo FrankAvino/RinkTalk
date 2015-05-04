@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FLAnimatedImage.h"
 
 @interface PageContentViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *tutorialLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *tutorialImageView;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *tutorialImageView;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @property NSUInteger pageIndex;

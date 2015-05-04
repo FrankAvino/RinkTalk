@@ -13,7 +13,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tutorialImageView.image = [UIImage imageNamed:self.imgFile];
+
+    
+    NSURL *url1 = [[NSBundle mainBundle] URLForResource:self.imgFile withExtension:@"gif"];
+    NSData *data1 = [NSData dataWithContentsOfURL:url1];
+
+    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData: data1];
+    
+    self.tutorialImageView.animatedImage = image;
     self.tutorialLabel.text = self.txtTitle;
     self.descriptionLabel.text = self.txtDescription;
 }

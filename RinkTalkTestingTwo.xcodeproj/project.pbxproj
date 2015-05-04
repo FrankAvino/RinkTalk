@@ -14,6 +14,10 @@
 		BA4235711AE1762400DFD849 /* AdminLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235701AE1762400DFD849 /* AdminLoginViewController.m */; };
 		BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235731AE1789700DFD849 /* AdminViewController.m */; };
 		BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FFD801AD08D87000F9508 /* LoginViewController.m */; };
+		BA6641FA1AF8064300B725B6 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6641F71AF8064300B725B6 /* FLAnimatedImage.m */; };
+		BA6641FB1AF8064300B725B6 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6641F91AF8064300B725B6 /* FLAnimatedImageView.m */; };
+		BA6641FD1AF80D6400B725B6 /* RinkDiagram.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA6641FC1AF80D6400B725B6 /* RinkDiagram.gif */; };
+		BA6641FF1AF80F4D00B725B6 /* hip_check.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA6641FE1AF80F4D00B725B6 /* hip_check.gif */; };
 		BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */; };
 		BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC1FDE51AD0586900E77405 /* GamesListViewController.m */; };
 		C82647C31AD397C700EF4081 /* GameEventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82647C21AD397C600EF4081 /* GameEventsListTableViewController.m */; };
@@ -64,6 +68,12 @@
 		BA4235731AE1789700DFD849 /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
 		BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BA5FFD801AD08D87000F9508 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BA6641F61AF8064300B725B6 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		BA6641F71AF8064300B725B6 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		BA6641F81AF8064300B725B6 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		BA6641F91AF8064300B725B6 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		BA6641FC1AF80D6400B725B6 /* RinkDiagram.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = RinkDiagram.gif; sourceTree = "<group>"; };
+		BA6641FE1AF80F4D00B725B6 /* hip_check.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hip_check.gif; sourceTree = "<group>"; };
 		BA6A136E1AD1EBA900FC2429 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		BAC1FDE41AD0586900E77405 /* GamesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesListViewController.h; sourceTree = "<group>"; };
@@ -182,6 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				C8EA13EE1A7F438F00AF902A /* Main.storyboard */,
+				BA6641F61AF8064300B725B6 /* FLAnimatedImage.h */,
+				BA6641F71AF8064300B725B6 /* FLAnimatedImage.m */,
+				BA6641F81AF8064300B725B6 /* FLAnimatedImageView.h */,
+				BA6641F91AF8064300B725B6 /* FLAnimatedImageView.m */,
 				BA1058101AF737F500F2D6D5 /* PageContentViewController.h */,
 				BA1058111AF737F500F2D6D5 /* PageContentViewController.m */,
 				BA10580D1AF737BE00F2D6D5 /* RootViewController.h */,
@@ -197,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				BA1058181AF744EC00F2D6D5 /* missed_hit.gif */,
+				BA6641FC1AF80D6400B725B6 /* RinkDiagram.gif */,
+				BA6641FE1AF80F4D00B725B6 /* hip_check.gif */,
 				BA1058161AF742FD00F2D6D5 /* hit.gif */,
 				C8EA143C1A8C149700AF902A /* Media.xcassets */,
 				C8EA13E81A7F438F00AF902A /* AppDelegate.h */,
@@ -357,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA1058191AF744EC00F2D6D5 /* missed_hit.gif in Resources */,
+				BA6641FF1AF80F4D00B725B6 /* hip_check.gif in Resources */,
 				C8EA14571A966CE900AF902A /* Launch Screen.xib in Resources */,
+				BA6641FD1AF80D6400B725B6 /* RinkDiagram.gif in Resources */,
 				C8EA13F01A7F438F00AF902A /* Main.storyboard in Resources */,
 				BA1058171AF742FD00F2D6D5 /* hit.gif in Resources */,
 				C8EA143D1A8C149700AF902A /* Media.xcassets in Resources */,
@@ -380,12 +398,14 @@
 			files = (
 				C82647C31AD397C700EF4081 /* GameEventsListTableViewController.m in Sources */,
 				C8EA140C1A7F473900AF902A /* RecordEventViewController.m in Sources */,
+				BA6641FB1AF8064300B725B6 /* FLAnimatedImageView.m in Sources */,
 				BA10580F1AF737BE00F2D6D5 /* RootViewController.m in Sources */,
 				BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */,
 				C8EA142C1A802BF600AF902A /* Event.m in Sources */,
 				BA4235711AE1762400DFD849 /* AdminLoginViewController.m in Sources */,
 				C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */,
 				BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */,
+				BA6641FA1AF8064300B725B6 /* FLAnimatedImage.m in Sources */,
 				BA1058121AF737F500F2D6D5 /* PageContentViewController.m in Sources */,
 				C8EA13E71A7F438F00AF902A /* main.m in Sources */,
 				BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */,

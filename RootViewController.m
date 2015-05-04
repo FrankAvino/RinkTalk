@@ -15,7 +15,7 @@
     [super viewDidLoad];
     _arrPageTitles = @[@"What is a hit?",@"This is a hit.",@"This is not a hit."];
     _arrPageDescriptions = @[@"There are certain things to look for.", @"He makes strong intentional contact with his shoulders.", @"It doesn't count if you miss."];
-    _arrPageImages =@[@"RinkDiagram.png",@"hit.gif",@"missed_hit.gif"];
+    _arrPageImages =@[@"hip_check",@"hit",@"missed_hit"];
     // Create page view controller
     self.PageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.PageViewController.dataSource = self;
