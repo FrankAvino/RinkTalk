@@ -66,7 +66,6 @@ def main():
 		if not e1.clustered:	
 			cluster = [e1]
 			for e2 in events:
-				# and e1.submittedBy != e2.submittedBy
 				# removed that constraint for testing
 				if e1.objectId != e2.objectId and e1.type == e2.type and not e2.clustered and different_people(e1,e2):
 					if time_diff(e1,e2) <= datetime.timedelta(seconds=5.0):
@@ -90,8 +89,8 @@ def main():
 		# TODO use cluster sizes as confidence measure
 		# link should be ~2 seconds before event occurs, plus 1 second assumed delay in recording
 		leadup_delay = datetime.timedelta(seconds=3.0)
-		print "{} @ {} (recorded by {} users)".format(ve[0].type, str(ve[0].createdAt- game_start - leadup_delay).split('.')[0], ve[1])
-
+		#print "{} @ {} (recorded by {} users)".format(ve[0].type, str(ve[0].createdAt- game_start - leadup_delay).split('.')[0], ve[1])
+		print str(ve[0].createdAt- game_start).split('.')[0]
 	print "\nFrequency of cluster sizes for confirmed events:\n=========================="
 	for sz in confidence_map:
 		print "{} people : {} events".format(sz, confidence_map[sz])
