@@ -32,33 +32,29 @@
 }
 
 - (void)viewDidLoad{
-    // start animating spinner
     [_spinner startAnimating];
     
-    NSDate* now = [NSDate date];
+    NSDate *now = [NSDate date];
     
     // Load all the upcoming games
-    // it's async so it doesn't need to be in a different thread?
     PFQuery *query = [PFQuery queryWithClassName:@"Game"];
-    //[query whereKey:@"startDate" greaterThan:now];
+    [query whereKey:@"startDate" greaterThan:now];
     [query findObjectsInBackgroundWithBlock:^(NSArray *games, NSError *error) {
         if (!error) {
              NSLog(@"Successfully retrieved %lu games.", (unsigned long)games.count);
             _upcomingGames = [[NSMutableArray alloc] initWithCapacity:games.count];
             
-            // stores games in array self.upcomingGames
             for (PFObject *game in games) {
                 [_upcomingGames addObject: game];
             }
             
-            // Frank - do something here to display each game as a button
+            // TODO dynamically generate game button list
             
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
         
-        // make spinner disappear
         [_spinner stopAnimating];
     }];
 }
@@ -70,17 +66,15 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIButton *button = (UIButton *)sender;
-    UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
-    EventsListViewController *destViewController = (EventsListViewController* )[navController topViewController];
-    destViewController.navigationItem.title = button.titleLabel.text;
-    
 
-    if ([[segue identifier] isEqualToString:@"St. Viator"]) {
-        destViewController.game = [_upcomingGames objectAtIndex:1]; // pass selected game
-    }
-    
-    if (_guestName){
-        destViewController.guestName = _guestName;
+    if ([[segue identifier] isEqualToString:@"Team1"]) {
+        EventsListViewController *destViewController = (EventsListViewController* ) [segue destinationViewController];
+        destViewController.navigationItem.title = button.titleLabel.text;
+        destViewController.game = [_upcomingGames objectAtIndex:0]; // pass selected game
+        
+        if (_guestName){
+            destViewController.guestName = _guestName;
+        }
     }
 
 }

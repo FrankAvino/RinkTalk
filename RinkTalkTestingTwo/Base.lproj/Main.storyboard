@@ -18,75 +18,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppz-uK-7sI">
-                                <rect key="frame" x="220" y="148" width="161" height="30"/>
+                                <rect key="frame" x="220" y="100" width="161" height="30"/>
                                 <state key="normal" title="Sibley @ South St. Paul">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="clG-bU-95I" kind="show" identifier="Sibley" id="RCj-dl-GI8"/>
-                                </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-vB-Q5g">
                                 <rect key="frame" x="290" y="82" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which game are you attending?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="EeX-bW-6YR">
-                                <rect key="frame" x="16" y="28" width="568" height="74"/>
+                                <rect key="frame" x="16" y="28" width="568" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-Ei-h0Q">
-                                <rect key="frame" x="228" y="110" width="144" height="30"/>
-                                <state key="normal" title="Saint Viator vs CHFS">
+                                <rect key="frame" x="245" y="62" width="111" height="30"/>
+                                <state key="normal" title="Team1 @ Team2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="clG-bU-95I" kind="show" identifier="St. Viator" id="XeJ-O3-6Oh"/>
+                                    <segue destination="IAB-Ux-VHm" kind="show" identifier="Team1" id="MT3-D8-HRA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-sx-Cwf">
-                                <rect key="frame" x="16" y="186" width="568" height="184"/>
-                                <string key="text">Watching game film is a terrific way for players to learn from their mistakes, and for coaches to find crucial teachable moments. However, youth and high school 
-sports programs rarely have the time to pore over an 
-entire 2+ hour event -- and definitely don't have the 
-resources to hire somebody to track them. Through 
-RinkTalk, parents in the stands can contribute to the
-improvement of their children and team by making a 
-simple doubletap gesture whenever a relevant event 
-occurs. RinkTalk collects all the data from parents over 
-the course of a game which, in conjunction with the 
-game film, is used to generate a easily-navigable
-Youtube video with timestamped links to all of the
-important events in a game.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-Rm-eXs">
+                                <rect key="frame" x="16" y="562" width="87" height="30"/>
+                                <state key="normal" title="View Tutorial">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KCR-YD-qwB" kind="presentation" id="s48-jx-1Mb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g0-ha-RFn">
+                                <rect key="frame" x="463" y="562" width="121" height="30"/>
+                                <state key="normal" title="What is RinkTalk?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qy7-3B-ziq" kind="show" id="Oo6-mX-VlM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EeX-bW-6YR" firstAttribute="leading" secondItem="hTJ-ZM-guF" secondAttribute="leadingMargin" id="0VF-XP-Zcf"/>
                             <constraint firstAttribute="centerX" secondItem="Y95-vB-Q5g" secondAttribute="centerX" id="31L-Hy-ShE"/>
+                            <constraint firstItem="Kfs-9O-fab" firstAttribute="top" secondItem="hUd-Rm-eXs" secondAttribute="bottom" constant="8" symbolic="YES" id="41k-xd-Uh6"/>
                             <constraint firstItem="EeX-bW-6YR" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="8" symbolic="YES" id="4bn-8a-P9P"/>
                             <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="90" id="86H-Gg-wL0"/>
                             <constraint firstItem="DbL-Ei-h0Q" firstAttribute="top" secondItem="EeX-bW-6YR" secondAttribute="bottom" constant="8" symbolic="YES" id="8IQ-RZ-Ztg"/>
-                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="top" secondItem="ppz-uK-7sI" secondAttribute="bottom" constant="8" symbolic="YES" id="Avc-Kf-Ddo"/>
                             <constraint firstAttribute="centerX" secondItem="ppz-uK-7sI" secondAttribute="centerX" id="Cso-5U-uWI"/>
+                            <constraint firstItem="hUd-Rm-eXs" firstAttribute="leading" secondItem="hTJ-ZM-guF" secondAttribute="leadingMargin" id="Dic-S8-uAG"/>
                             <constraint firstItem="ppz-uK-7sI" firstAttribute="top" secondItem="DbL-Ei-h0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="TrV-oq-7TY"/>
-                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="leading" secondItem="hTJ-ZM-guF" secondAttribute="leadingMargin" id="bDd-sa-SUl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EeX-bW-6YR" secondAttribute="trailing" id="bHN-Yn-Gzs"/>
                             <constraint firstAttribute="centerX" secondItem="DbL-Ei-h0Q" secondAttribute="centerX" id="cQr-Ht-uCf"/>
-                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="leading" secondItem="hTJ-ZM-guF" secondAttribute="leadingMargin" id="dNW-wV-9cK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jws-sx-Cwf" secondAttribute="trailing" id="fFf-FS-xI7"/>
-                            <constraint firstItem="Kfs-9O-fab" firstAttribute="top" secondItem="Jws-sx-Cwf" secondAttribute="bottom" id="kpQ-3l-ahh"/>
-                            <constraint firstItem="Jws-sx-Cwf" firstAttribute="trailing" secondItem="hTJ-ZM-guF" secondAttribute="trailingMargin" id="lxW-nG-Hud"/>
                             <constraint firstItem="Y95-vB-Q5g" firstAttribute="top" secondItem="AKz-J8-JcB" secondAttribute="bottom" constant="62" id="nNb-yq-NHd"/>
+                            <constraint firstItem="Kfs-9O-fab" firstAttribute="top" secondItem="5g0-ha-RFn" secondAttribute="bottom" constant="8" symbolic="YES" id="rFf-Yq-AQ7"/>
+                            <constraint firstItem="5g0-ha-RFn" firstAttribute="trailing" secondItem="hTJ-ZM-guF" secondAttribute="trailingMargin" id="uqj-Xu-R1b"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="dNW-wV-9cK"/>
-                                <exclude reference="fFf-FS-xI7"/>
-                                <exclude reference="kpQ-3l-ahh"/>
+                                <exclude reference="86H-Gg-wL0"/>
                             </mask>
                         </variation>
                     </view>
@@ -105,6 +98,48 @@ important events in a game.</string>
             </objects>
             <point key="canvasLocation" x="-565" y="-65"/>
         </scene>
+        <!--About RinkTalk-->
+        <scene sceneID="6Ha-TU-uHa">
+            <objects>
+                <viewController title="About RinkTalk" id="qy7-3B-ziq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tjX-3P-w1u"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fa2-wD-Yfq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o63-e9-Z0l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upJ-rf-VSZ">
+                                <rect key="frame" x="157" y="208" width="286" height="184"/>
+                                <string key="text">Watching game film is a terrific way for players to learn from their mistakes, and for coaches to find crucial teachable moments. However, youth and high school 
+sports programs rarely have the time to pore over an 
+entire 2+ hour event -- and definitely don't have the 
+resources to hire somebody to track them. Through 
+RinkTalk, parents in the stands can contribute to the
+improvement of their children and team by making a 
+simple doubletap gesture whenever a relevant event 
+occurs. RinkTalk collects all the data from parents over 
+the course of a game which, in conjunction with the 
+game film, is used to generate a easily-navigable
+Youtube video with timestamped links to all of the
+important events in a game.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="upJ-rf-VSZ" secondAttribute="centerX" id="gHt-Oo-cSV"/>
+                            <constraint firstAttribute="centerY" secondItem="upJ-rf-VSZ" secondAttribute="centerY" id="wno-iX-A6s"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bk-qp-eTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372" y="691"/>
+        </scene>
         <!--Events List View Controller-->
         <scene sceneID="VNx-9S-fQi">
             <objects>
@@ -118,7 +153,7 @@ important events in a game.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-le-YuS">
-                                <rect key="frame" x="266" y="187" width="68" height="30"/>
+                                <rect key="frame" x="266" y="100" width="68" height="30"/>
                                 <state key="normal" title="Turnovers">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -127,7 +162,7 @@ important events in a game.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xW-qf-dxt">
-                                <rect key="frame" x="266" y="149" width="68" height="30"/>
+                                <rect key="frame" x="266" y="62" width="68" height="30"/>
                                 <state key="normal" title="Hits">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -136,13 +171,13 @@ important events in a game.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which statistic would you like to record?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="4zK-Uc-8nG">
-                                <rect key="frame" x="16" y="72" width="568" height="69"/>
+                                <rect key="frame" x="16" y="28" width="568" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZI-oF-V2y">
-                                <rect key="frame" x="266" y="225" width="68" height="30"/>
+                                <rect key="frame" x="266" y="138" width="68" height="30"/>
                                 <state key="normal" title="Penalties">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -197,6 +232,7 @@ important events in a game.</string>
                                 <exclude reference="7NS-FZ-5cZ"/>
                                 <exclude reference="M2T-NX-lKj"/>
                                 <exclude reference="O3p-Kr-QSV"/>
+                                <exclude reference="S3I-zE-aX4"/>
                                 <exclude reference="dEJ-vY-HEg"/>
                                 <exclude reference="pOs-63-hjA"/>
                                 <exclude reference="MhV-X9-SNl"/>
@@ -214,7 +250,7 @@ important events in a game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qv9-0B-PsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="-42"/>
+            <point key="canvasLocation" x="203" y="-65"/>
         </scene>
         <!--Admin Login View Controller-->
         <scene sceneID="Ziu-x4-1ej">
@@ -394,7 +430,7 @@ important events in a game.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-LK-6dq">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098039215686274" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                 <gestureRecognizers/>
@@ -411,12 +447,6 @@ important events in a game.</string>
                                     <outletCollection property="gestureRecognizers" destination="N9n-FB-5FT" appends="YES" id="7es-LM-Uam"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hits recorded: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvA-5B-0Jb">
-                                <rect key="frame" x="445" y="72" width="139" height="21"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
-                                <color key="textColor" red="0.69721230720000005" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-Wp-Crw">
                                 <rect key="frame" x="213" y="518" width="175" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -428,17 +458,23 @@ important events in a game.</string>
                                     <segue destination="79E-7O-aBf" kind="show" id="KEH-p0-3t0"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hits recorded: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvA-5B-0Jb">
+                                <rect key="frame" x="445" y="28" width="139" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" red="0.69721230720000005" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="Wh0-LK-6dq" secondAttribute="bottom" id="A6j-nj-EmX"/>
                             <constraint firstItem="IvA-5B-0Jb" firstAttribute="trailing" secondItem="tm4-Oi-KN5" secondAttribute="trailingMargin" id="JWU-uS-mbb"/>
-                            <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="C5s-Wp-Crw" secondAttribute="bottom" constant="8" symbolic="YES" id="KOI-Hq-JAG"/>
                             <constraint firstItem="IvA-5B-0Jb" firstAttribute="top" secondItem="u5D-Uu-F6A" secondAttribute="bottom" constant="8" symbolic="YES" id="PvT-I2-OP9"/>
-                            <constraint firstAttribute="centerX" secondItem="C5s-Wp-Crw" secondAttribute="centerX" id="Q1X-zv-2Pa"/>
+                            <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="C5s-Wp-Crw" secondAttribute="bottom" constant="8" symbolic="YES" id="Shb-Zt-I0p"/>
                             <constraint firstItem="6EI-u3-EvY" firstAttribute="top" secondItem="C5s-Wp-Crw" secondAttribute="bottom" constant="8" id="SoM-0b-U61"/>
                             <constraint firstItem="Wh0-LK-6dq" firstAttribute="leading" secondItem="tm4-Oi-KN5" secondAttribute="leading" id="TLe-Ej-fvF"/>
+                            <constraint firstItem="C5s-Wp-Crw" firstAttribute="centerX" secondItem="Wh0-LK-6dq" secondAttribute="centerX" id="Xjx-xe-2LD"/>
                             <constraint firstAttribute="trailing" secondItem="Wh0-LK-6dq" secondAttribute="trailing" id="YMo-GA-zlo"/>
                             <constraint firstItem="Wh0-LK-6dq" firstAttribute="top" secondItem="u5D-Uu-F6A" secondAttribute="bottom" id="ZE0-Io-PMI"/>
                             <constraint firstAttribute="centerX" secondItem="IvA-5B-0Jb" secondAttribute="centerX" constant="-0.5" id="d8q-zP-zWR"/>
@@ -467,7 +503,7 @@ important events in a game.</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1716" y="-65"/>
+            <point key="canvasLocation" x="1076" y="-65"/>
         </scene>
         <!--Game Events List Table View Controller-->
         <scene sceneID="xu9-93-e1e">
@@ -513,7 +549,7 @@ important events in a game.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ej1-6P-eqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547" y="-42"/>
+            <point key="canvasLocation" x="2003" y="-65"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tig-7f-9FE">
@@ -545,6 +581,17 @@ important events in a game.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-Nf-5SV">
+                                <rect key="frame" x="279" y="104" width="43" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeSignUp:" destination="Bd3-4D-1T3" eventType="touchUpInside" id="itH-RA-uTg"/>
+                                    <action selector="logIn:" destination="XTd-TT-epP" eventType="touchUpInside" id="kQD-wH-bdR"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JeB-iv-0T2">
                                 <rect key="frame" x="228" y="28" width="144" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -555,27 +602,18 @@ important events in a game.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-Nf-5SV">
-                                <rect key="frame" x="278" y="104" width="43" height="30"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="completeSignUp:" destination="Bd3-4D-1T3" eventType="touchUpInside" id="itH-RA-uTg"/>
-                                    <action selector="logIn:" destination="XTd-TT-epP" eventType="touchUpInside" id="kQD-wH-bdR"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRD-qM-RYW">
-                                <rect key="frame" x="272" y="142" width="55" height="30"/>
+                                <rect key="frame" x="529" y="562" width="55" height="30"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Bd3-4D-1T3" kind="show" id="bSK-3D-pvd"/>
+                                    <segue destination="Bd3-4D-1T3" kind="presentation" id="bSK-3D-pvd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxR-SW-v2f">
-                                <rect key="frame" x="236" y="285" width="128" height="30"/>
+                                <rect key="frame" x="236" y="304" width="128" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Continue as Guest">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -584,38 +622,27 @@ important events in a game.</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guest name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYa-nw-eQK">
-                                <rect key="frame" x="228" y="247" width="144" height="30"/>
+                                <rect key="frame" x="228" y="266" width="144" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmU-Sj-6Qo">
-                                <rect key="frame" x="257" y="562" width="87" height="30"/>
-                                <state key="normal" title="View Tutorial">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="KCR-YD-qwB" kind="presentation" id="10O-kQ-yAK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FDb-Nf-5SV" firstAttribute="centerX" secondItem="dRD-qM-RYW" secondAttribute="centerX" id="0Og-kK-eE5"/>
-                            <constraint firstItem="JeB-iv-0T2" firstAttribute="centerX" secondItem="iaV-QQ-XOn" secondAttribute="centerX" id="0yW-6C-4hK"/>
-                            <constraint firstItem="dRD-qM-RYW" firstAttribute="top" secondItem="FDb-Nf-5SV" secondAttribute="bottom" constant="8" symbolic="YES" id="43g-Vt-VC5"/>
-                            <constraint firstAttribute="centerX" secondItem="JeB-iv-0T2" secondAttribute="centerX" id="5QH-dz-wt4"/>
-                            <constraint firstItem="LmU-Sj-6Qo" firstAttribute="centerX" secondItem="ZxR-SW-v2f" secondAttribute="centerX" id="5zw-7a-W1E"/>
-                            <constraint firstItem="JeB-iv-0T2" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="9BY-NM-5pU"/>
-                            <constraint firstItem="oYa-nw-eQK" firstAttribute="centerX" secondItem="ZxR-SW-v2f" secondAttribute="centerX" id="A7P-fV-u5z"/>
-                            <constraint firstItem="oYa-nw-eQK" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="BwT-kd-dfa"/>
-                            <constraint firstItem="sN4-HJ-XeI" firstAttribute="top" secondItem="LmU-Sj-6Qo" secondAttribute="bottom" constant="8" symbolic="YES" id="EP4-Kc-f0J"/>
-                            <constraint firstAttribute="centerX" secondItem="oYa-nw-eQK" secondAttribute="centerX" id="ON4-Uh-6Jh"/>
-                            <constraint firstItem="FDb-Nf-5SV" firstAttribute="top" secondItem="iaV-QQ-XOn" secondAttribute="bottom" constant="8" symbolic="YES" id="Tqi-NZ-G9Z"/>
-                            <constraint firstItem="iaV-QQ-XOn" firstAttribute="top" secondItem="JeB-iv-0T2" secondAttribute="bottom" constant="8" symbolic="YES" id="iyv-hu-axU"/>
-                            <constraint firstItem="JeB-iv-0T2" firstAttribute="top" secondItem="1iq-iM-27B" secondAttribute="bottom" constant="8" symbolic="YES" id="m6W-bG-152"/>
-                            <constraint firstItem="oYa-nw-eQK" firstAttribute="top" secondItem="dRD-qM-RYW" secondAttribute="bottom" constant="75" id="mpj-h9-39U"/>
-                            <constraint firstItem="FDb-Nf-5SV" firstAttribute="centerX" secondItem="iaV-QQ-XOn" secondAttribute="centerX" id="s8E-in-A7r"/>
-                            <constraint firstItem="ZxR-SW-v2f" firstAttribute="top" secondItem="oYa-nw-eQK" secondAttribute="bottom" constant="8" symbolic="YES" id="zWZ-on-lAF"/>
+                            <constraint firstAttribute="centerX" secondItem="oYa-nw-eQK" secondAttribute="centerX" id="1BC-FE-Z4a"/>
+                            <constraint firstItem="ZxR-SW-v2f" firstAttribute="top" secondItem="oYa-nw-eQK" secondAttribute="bottom" constant="8" symbolic="YES" id="4zo-EG-aPB"/>
+                            <constraint firstItem="JeB-iv-0T2" firstAttribute="centerX" secondItem="iaV-QQ-XOn" secondAttribute="centerX" id="EVY-mk-RSQ"/>
+                            <constraint firstItem="FDb-Nf-5SV" firstAttribute="top" secondItem="iaV-QQ-XOn" secondAttribute="bottom" constant="8" id="Gxb-DV-fpi"/>
+                            <constraint firstItem="sN4-HJ-XeI" firstAttribute="top" secondItem="dRD-qM-RYW" secondAttribute="bottom" constant="8" symbolic="YES" id="Tyq-Mp-SU9"/>
+                            <constraint firstItem="iaV-QQ-XOn" firstAttribute="top" secondItem="JeB-iv-0T2" secondAttribute="bottom" constant="8" symbolic="YES" id="XHs-iZ-fSO"/>
+                            <constraint firstItem="FDb-Nf-5SV" firstAttribute="centerX" secondItem="iaV-QQ-XOn" secondAttribute="centerX" id="XI2-wN-1lg"/>
+                            <constraint firstAttribute="centerY" secondItem="oYa-nw-eQK" secondAttribute="centerY" constant="19" id="XZU-Qu-PBc"/>
+                            <constraint firstAttribute="centerX" secondItem="JeB-iv-0T2" secondAttribute="centerX" id="XiN-Gj-c74"/>
+                            <constraint firstItem="dRD-qM-RYW" firstAttribute="trailing" secondItem="ejp-Vd-s5v" secondAttribute="trailingMargin" id="ZTE-F5-id0"/>
+                            <constraint firstItem="JeB-iv-0T2" firstAttribute="top" secondItem="1iq-iM-27B" secondAttribute="bottom" constant="8" symbolic="YES" id="cLG-q9-8C8"/>
+                            <constraint firstItem="ZxR-SW-v2f" firstAttribute="centerX" secondItem="oYa-nw-eQK" secondAttribute="centerX" id="g7T-yt-Wm6"/>
+                            <constraint firstItem="oYa-nw-eQK" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="gsO-Ly-l97"/>
+                            <constraint firstItem="JeB-iv-0T2" firstAttribute="width" secondItem="iaV-QQ-XOn" secondAttribute="width" id="zpH-a8-wT6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -626,7 +653,7 @@ important events in a game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uup-B3-KmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2274" y="-42"/>
+            <point key="canvasLocation" x="-2261" y="-42"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="jgC-Hy-vhb">
@@ -669,6 +696,15 @@ important events in a game.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84a-Xw-rch">
+                                <rect key="frame" x="541" y="562" width="43" height="30"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XTd-TT-epP" kind="presentation" id="QnW-t4-bMf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -676,11 +712,13 @@ important events in a game.</string>
                             <constraint firstItem="xjA-iP-Cfd" firstAttribute="top" secondItem="iQs-NH-jor" secondAttribute="bottom" constant="8" symbolic="YES" id="3lL-Bu-2Mh"/>
                             <constraint firstItem="iQs-NH-jor" firstAttribute="width" secondItem="xjA-iP-Cfd" secondAttribute="width" id="47X-WC-dxc"/>
                             <constraint firstItem="Myq-0j-1e0" firstAttribute="centerX" secondItem="xjA-iP-Cfd" secondAttribute="centerX" id="DKS-89-ndl"/>
+                            <constraint firstItem="84a-Xw-rch" firstAttribute="trailing" secondItem="GRe-2S-tO8" secondAttribute="trailingMargin" id="FAa-By-9D4"/>
                             <constraint firstAttribute="centerX" secondItem="uRv-Pv-EXA" secondAttribute="centerX" id="FCV-In-JKG"/>
                             <constraint firstItem="iQs-NH-jor" firstAttribute="width" secondItem="Lf9-OP-zBK" secondAttribute="width" id="KLc-1j-HHu"/>
                             <constraint firstItem="iQs-NH-jor" firstAttribute="centerX" secondItem="xjA-iP-Cfd" secondAttribute="centerX" id="MLi-6E-uuf"/>
                             <constraint firstItem="Lf9-OP-zBK" firstAttribute="top" secondItem="uRv-Pv-EXA" secondAttribute="bottom" constant="8" symbolic="YES" id="Rg2-hV-7dH"/>
                             <constraint firstItem="Myq-0j-1e0" firstAttribute="top" secondItem="xjA-iP-Cfd" secondAttribute="bottom" constant="8" symbolic="YES" id="TL9-ch-BqP"/>
+                            <constraint firstItem="EHB-at-gcy" firstAttribute="top" secondItem="84a-Xw-rch" secondAttribute="bottom" constant="8" id="cD9-Vs-fPy"/>
                             <constraint firstItem="iQs-NH-jor" firstAttribute="centerX" secondItem="Lf9-OP-zBK" secondAttribute="centerX" id="dps-cK-IIV"/>
                             <constraint firstItem="uRv-Pv-EXA" firstAttribute="width" secondItem="Lf9-OP-zBK" secondAttribute="width" id="geA-LA-mi5"/>
                             <constraint firstItem="uRv-Pv-EXA" firstAttribute="centerX" secondItem="Lf9-OP-zBK" secondAttribute="centerX" id="mHW-jn-W5A"/>
@@ -697,7 +735,7 @@ important events in a game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36J-rE-JGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2274" y="724"/>
+            <point key="canvasLocation" x="-2261" y="659"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="F1i-Wu-m9q">
@@ -715,7 +753,7 @@ important events in a game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-kR-9l4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2117" y="1678"/>
+            <point key="canvasLocation" x="-1396" y="767"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="llA-Xd-Ib7">
@@ -723,7 +761,7 @@ important events in a game.</string>
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="oN3-HH-LPj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTR-mV-YZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1386" y="1373"/>
+            <point key="canvasLocation" x="-1396" y="1449"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="6Hs-ue-oEM">
@@ -751,25 +789,32 @@ important events in a game.</string>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-4b-Kzi">
-                                <rect key="frame" x="267" y="107" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="267" y="108" width="66" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1fj-RF-wmT">
                                 <rect key="frame" x="16" y="472" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1Q-jX-ac0">
+                                <rect key="frame" x="282" y="20" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="K0h-aL-XvD" kind="custom" customClass="DismissSegue" id="GNe-An-T3Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="1fj-RF-wmT" secondAttribute="centerX" id="0Pf-aS-dNh"/>
-                            <constraint firstItem="1fj-RF-wmT" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" id="0Sm-Nm-c1e"/>
+                            <constraint firstItem="1fj-RF-wmT" firstAttribute="trailing" secondItem="B6P-Tp-sEP" secondAttribute="trailingMargin" id="3Rh-5X-fgy"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="1fj-RF-wmT" secondAttribute="centerX" id="81S-rb-4MP"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="B6P-Tp-sEP" secondAttribute="centerX" id="BNM-o7-nRJ"/>
-                            <constraint firstItem="1fj-RF-wmT" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="8" symbolic="YES" id="CDP-ly-AUO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1fj-RF-wmT" secondAttribute="trailing" id="DQ0-eb-abB"/>
+                            <constraint firstAttribute="centerX" secondItem="R1Q-jX-ac0" secondAttribute="centerX" id="C9S-TD-wvQ"/>
+                            <constraint firstItem="1fj-RF-wmT" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="8" symbolic="YES" id="WrN-HB-nhN"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" constant="61" id="Wre-MF-JJe"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="gYN-4b-Kzi" secondAttribute="centerX" id="bIf-jb-U4q"/>
                             <constraint firstItem="gYN-4b-Kzi" firstAttribute="centerX" secondItem="gjQ-n5-X4m" secondAttribute="centerX" id="dbu-5I-87Z"/>
@@ -777,6 +822,8 @@ important events in a game.</string>
                             <constraint firstAttribute="trailingMargin" secondItem="gjQ-n5-X4m" secondAttribute="trailing" constant="61" id="hxv-q1-7Uz"/>
                             <constraint firstItem="eng-06-BZh" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="136" id="jRL-76-fFV"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerY" secondItem="B6P-Tp-sEP" secondAttribute="centerY" id="usw-fo-X8J"/>
+                            <constraint firstItem="R1Q-jX-ac0" firstAttribute="top" secondItem="jcy-oc-7fj" secondAttribute="bottom" id="xC7-bL-k54"/>
+                            <constraint firstItem="1fj-RF-wmT" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" id="xMk-88-eac"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -792,30 +839,11 @@ important events in a game.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wM9-Qb-VFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1386" y="2074"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="f7g-SZ-aMo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="clG-bU-95I" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a83-E3-60y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="IAB-Ux-VHm" kind="relationship" relationship="rootViewController" id="KiH-4b-pC1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LQS-sv-9sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="228" y="-42"/>
+            <point key="canvasLocation" x="-1396" y="2144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kMc-cd-cv3"/>
-        <segue reference="XeJ-O3-6Oh"/>
+        <segue reference="GNe-An-T3Y"/>
         <segue reference="53F-J5-exQ"/>
     </inferredMetricsTieBreakers>
 </document>

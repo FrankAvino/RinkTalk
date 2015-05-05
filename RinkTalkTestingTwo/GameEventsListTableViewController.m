@@ -23,9 +23,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.eventsToShow = [[NSMutableArray alloc] init];
-    self.eventTimesToShow = [[NSMutableArray alloc] init];
-    self.eventRecordersToShow = [[NSMutableArray alloc] init];
+    _eventsToShow = [[NSMutableArray alloc] init];
+    _eventTimesToShow = [[NSMutableArray alloc] init];
+    _eventRecordersToShow = [[NSMutableArray alloc] init];
     [self loadEvents];
 }
 
@@ -40,10 +40,10 @@
                 
                 PFObject *myGame = object[@"game"];
                 
-                if(myGame.objectId == self.game.objectId){
+                if(myGame.objectId == _game.objectId){
                     //NSLog(@"We have found a game whose event we can display");
-                    [self.eventsToShow addObject:object[@"type"]];
-                    [self.eventTimesToShow addObject:object.createdAt];
+                    [_eventsToShow addObject:object[@"type"]];
+                    [_eventTimesToShow addObject:object.createdAt];
                     NSString *myUser;
                     if(object[@"submittedBy"]){
                         myUser = object[@"submittedBy"][@"username"];
@@ -53,7 +53,7 @@
                     }
                         //NSLog(@"User: %@", myUser);
                     
-                    [self.eventRecordersToShow addObject:myUser];
+                    [_eventRecordersToShow addObject:myUser];
                     [self.tableView reloadData];
                     //NSLog(object[@"type"]);
                     
@@ -71,10 +71,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    //NSLog(@"Number of rows: @%f", self.eventsToShow.count);
+    //NSLog(@"Number of rows: @%f", _eventsToShow.count);
     
     
-    return [self.eventsToShow count];
+    return [_eventsToShow count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,14 +88,16 @@
     NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
     [timeFormatter setDateFormat:@"hh:mm:ss a"];
     [timeFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"CST"]];
-    NSString *newTime = [timeFormatter stringFromDate:[self.eventTimesToShow objectAtIndex:indexPath.row]];
+    NSString *newTime = [timeFormatter stringFromDate:[_eventTimesToShow objectAtIndex:indexPath.row]];
     //NSLog(@"%@ , ", newTime);
     newTime = [@"Rec. " stringByAppendingString: newTime];
     newTime = [newTime stringByAppendingString:@" by "];
-    NSString *detailLabel = [newTime stringByAppendingString:[self.eventRecordersToShow objectAtIndex:indexPath.row]];
+    NSString *detailLabel = [newTime stringByAppendingString:[_eventRecordersToShow objectAtIndex:indexPath.row]];
     // Configure the cell...
-    cell.textLabel.text = [self.eventsToShow objectAtIndex:indexPath.row];
+    cell.textLabel.text = [_eventsToShow objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = detailLabel;
+    
+    // TODO make font bold if you user recorded a given row
     return cell;
 }
 @end

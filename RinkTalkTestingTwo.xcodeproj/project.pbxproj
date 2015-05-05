@@ -13,6 +13,8 @@
 		BA1058191AF744EC00F2D6D5 /* missed_hit.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA1058181AF744EC00F2D6D5 /* missed_hit.gif */; };
 		BA4235711AE1762400DFD849 /* AdminLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235701AE1762400DFD849 /* AdminLoginViewController.m */; };
 		BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4235731AE1789700DFD849 /* AdminViewController.m */; };
+		BA5CE12E1AF8840E00845839 /* RinkBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA5CE12D1AF8840E00845839 /* RinkBackground.jpg */; };
+		BA5CE1311AF8875C00845839 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5CE1301AF8875C00845839 /* DismissSegue.m */; };
 		BA5FFD811AD08D87000F9508 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FFD801AD08D87000F9508 /* LoginViewController.m */; };
 		BA6641FA1AF8064300B725B6 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6641F71AF8064300B725B6 /* FLAnimatedImage.m */; };
 		BA6641FB1AF8064300B725B6 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6641F91AF8064300B725B6 /* FLAnimatedImageView.m */; };
@@ -66,6 +68,9 @@
 		BA4235701AE1762400DFD849 /* AdminLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminLoginViewController.m; sourceTree = "<group>"; };
 		BA4235721AE1789700DFD849 /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
 		BA4235731AE1789700DFD849 /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
+		BA5CE12D1AF8840E00845839 /* RinkBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RinkBackground.jpg; sourceTree = "<group>"; };
+		BA5CE12F1AF8875C00845839 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		BA5CE1301AF8875C00845839 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
 		BA5FFD7F1AD08D87000F9508 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BA5FFD801AD08D87000F9508 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BA6641F61AF8064300B725B6 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
@@ -143,6 +148,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA5CE1321AF887EE00845839 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BA5CE12F1AF8875C00845839 /* DismissSegue.h */,
+				BA5CE1301AF8875C00845839 /* DismissSegue.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		BAC1FDE71AD0596200E77405 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +214,7 @@
 				BA1058111AF737F500F2D6D5 /* PageContentViewController.m */,
 				BA10580D1AF737BE00F2D6D5 /* RootViewController.h */,
 				BA10580E1AF737BE00F2D6D5 /* RootViewController.m */,
+				BA5CE1321AF887EE00845839 /* Utility */,
 				C8EA142E1A802C4C00AF902A /* View Controllers */,
 				C8EA142F1A802C5E00AF902A /* Models */,
 				C8EA13E41A7F438F00AF902A /* Supporting Files */,
@@ -211,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				BA1058181AF744EC00F2D6D5 /* missed_hit.gif */,
+				BA5CE12D1AF8840E00845839 /* RinkBackground.jpg */,
 				BA6641FC1AF80D6400B725B6 /* RinkDiagram.gif */,
 				BA6641FE1AF80F4D00B725B6 /* hip_check.gif */,
 				BA1058161AF742FD00F2D6D5 /* hit.gif */,
@@ -377,6 +393,7 @@
 				C8EA14571A966CE900AF902A /* Launch Screen.xib in Resources */,
 				BA6641FD1AF80D6400B725B6 /* RinkDiagram.gif in Resources */,
 				C8EA13F01A7F438F00AF902A /* Main.storyboard in Resources */,
+				BA5CE12E1AF8840E00845839 /* RinkBackground.jpg in Resources */,
 				BA1058171AF742FD00F2D6D5 /* hit.gif in Resources */,
 				C8EA143D1A8C149700AF902A /* Media.xcassets in Resources */,
 			);
@@ -410,6 +427,7 @@
 				C8EA13E71A7F438F00AF902A /* main.m in Sources */,
 				BA4235741AE1789700DFD849 /* AdminViewController.m in Sources */,
 				BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */,
+				BA5CE1311AF8875C00845839 /* DismissSegue.m in Sources */,
 				C8EA140F1A7F49D900AF902A /* EventsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

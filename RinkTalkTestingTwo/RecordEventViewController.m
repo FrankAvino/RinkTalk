@@ -31,7 +31,7 @@
                 
                 if([foundUsers count] == 1) {
                     for (PFUser *foundUser in foundUsers) {
-                        self.userObj = foundUser;
+                        _userObj = foundUser;
                     }
                 }
             }
@@ -41,46 +41,46 @@
         }];
     }
     
-    self.eventsCount = 0;
+    _eventsCount = 0;
     
 }
 
 // TODO make this just a view and not a button
 - (IBAction)recordEvent:(id)sender {
     
-    self.eventsCount++;
-    self.hitsRecordedCount.text = [NSString stringWithFormat:@"Hits recorded: %d", self.eventsCount];
+    _eventsCount++;
+    _hitsRecordedCount.text = [NSString stringWithFormat:@"Hits recorded: %d", _eventsCount];
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
-    self.recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:1.00 blue:0.00 alpha:1.0];
+    _recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:1.00 blue:0.00 alpha:1.0];
     [self performSelector:@selector(changeback) withObject:self afterDelay:0.5];
     
     PFObject *Event = [PFUser objectWithClassName:@"Event"];
     
-    Event[@"type"] = self.eventType;
-    Event[@"game"] = self.game;
+    Event[@"type"] = _eventType;
+    Event[@"game"] = _game;
     
     if (!_guestName){
-        Event[@"submittedBy"] = self.userObj;
+        Event[@"submittedBy"] = _userObj;
     }
     else{
         Event[@"guestName"] = [@"(guest)" stringByAppendingString:_guestName];
     }
     
     [Event saveInBackground];
-    NSLog(@"%@ recorded", self.eventType);
+    //NSLog(@"%@ recorded", _eventType);
 
 }
 
 -(void)changeback{
-    self.recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:0.16 blue:0.31 alpha:1.0];
+    _recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:0.16 blue:0.31 alpha:1.0];
     
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [[segue destinationViewController] setGame: self.game]; // pass selected game
+    [[segue destinationViewController] setGame: _game]; // pass selected game
 }
 
 @end
