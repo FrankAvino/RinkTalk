@@ -18,6 +18,11 @@
 -(void)viewDidLoad{
     _eventTypes = [[NSMutableDictionary alloc] init];
     [_eventTypes setValue:@"Hit" forKey:@"Hits"];
+    [_eventTypes setValue:@"Offensive Zone Faceoff" forKey:@"Offensive Zone Faceoffs"];
+    [_eventTypes setValue:@"Defensive Zone Faceoff" forKey:@"Defensive Zone Faceoffs"];
+    [_eventTypes setValue:@"Neutral Zone Faceoff" forKey:@"Neutral Zone Faceoffs"];
+    [_eventTypes setValue:@"Penalty" forKey:@"Penalties"];
+    [_eventTypes setValue:@"Goal" forKey:@"Goals"];
 }
 
 #pragma mark - Navigation
@@ -38,7 +43,5 @@
     }
     
 }
-
-// Should we have a "wow" event?
 
 @end

@@ -33,8 +33,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-Ei-h0Q">
-                                <rect key="frame" x="245" y="62" width="111" height="30"/>
-                                <state key="normal" title="Team1 @ Team2">
+                                <rect key="frame" x="211" y="62" width="178" height="30"/>
+                                <state key="normal" title="Buffalo Grove @ St. Viator">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -152,9 +152,9 @@ important events in a game.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-le-YuS">
-                                <rect key="frame" x="266" y="100" width="68" height="30"/>
-                                <state key="normal" title="Turnovers">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-le-YuS">
+                                <rect key="frame" x="215" y="100" width="170" height="30"/>
+                                <state key="normal" title="Neutral Zone Faceoffs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -162,28 +162,34 @@ important events in a game.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xW-qf-dxt">
-                                <rect key="frame" x="266" y="62" width="68" height="30"/>
-                                <state key="normal" title="Hits">
+                                <rect key="frame" x="215" y="62" width="170" height="30"/>
+                                <state key="normal" title="Offensive Zone Faceoffs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="8kJ-H8-QL2" kind="show" id="aqj-Hg-gHT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which statistic would you like to record?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="4zK-Uc-8nG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which event type would you like to record?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="4zK-Uc-8nG">
                                 <rect key="frame" x="16" y="28" width="568" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZI-oF-V2y">
-                                <rect key="frame" x="266" y="138" width="68" height="30"/>
-                                <state key="normal" title="Penalties">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZI-oF-V2y">
+                                <rect key="frame" x="215" y="138" width="170" height="30"/>
+                                <state key="normal" title="Defensive Zone Faceoffs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="8kJ-H8-QL2" kind="show" id="Jas-DW-93k"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4N-DL-naw">
+                                <rect key="frame" x="269" y="176" width="63" height="30"/>
+                                <state key="normal" title="Penalties">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-aW-AVU">
                                 <rect key="frame" x="540" y="518" width="44" height="30"/>
@@ -193,6 +199,12 @@ important events in a game.</string>
                                 <connections>
                                     <segue destination="EAs-uu-8Vp" kind="show" identifier="Admin Login" id="dH4-aa-80J"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4U-3w-ymC">
+                                <rect key="frame" x="280" y="214" width="40" height="30"/>
+                                <state key="normal" title="Goals">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,12 +219,15 @@ important events in a game.</string>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="KyL-OV-KpG"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="M2T-NX-lKj"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="MhV-X9-SNl"/>
+                            <constraint firstItem="v4U-3w-ymC" firstAttribute="centerX" secondItem="O4N-DL-naw" secondAttribute="centerX" constant="-0.5" id="NBk-Ev-8Ol"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="0.5" id="NeE-c8-uiZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2xW-qf-dxt" secondAttribute="trailing" constant="250" id="O3p-Kr-QSV"/>
+                            <constraint firstItem="v4U-3w-ymC" firstAttribute="top" secondItem="O4N-DL-naw" secondAttribute="bottom" constant="8" id="OYa-iF-atj"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="85" id="S3I-zE-aX4"/>
                             <constraint firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" id="SIj-f3-Fie"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="top" secondItem="fmq-le-YuS" secondAttribute="bottom" constant="8" symbolic="YES" id="ScL-K7-fLh"/>
                             <constraint firstAttribute="centerX" secondItem="kWL-aW-AVU" secondAttribute="centerX" id="Tu6-TR-Gvq"/>
+                            <constraint firstItem="O4N-DL-naw" firstAttribute="centerX" secondItem="tZI-oF-V2y" secondAttribute="centerX" id="V5i-ki-cbn"/>
                             <constraint firstItem="4zK-Uc-8nG" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="8" symbolic="YES" id="WRD-fc-JCr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tZI-oF-V2y" secondAttribute="trailing" constant="250" id="Zem-Np-TLP"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="-0.5" id="cTx-W1-SzB"/>
@@ -221,6 +236,7 @@ important events in a game.</string>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="4zK-Uc-8nG" secondAttribute="bottom" constant="8" symbolic="YES" id="eDN-2e-IEV"/>
                             <constraint firstItem="tZI-oF-V2y" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="250" id="hna-Q7-wM5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fmq-le-YuS" secondAttribute="trailing" constant="202" id="pOs-63-hjA"/>
+                            <constraint firstItem="O4N-DL-naw" firstAttribute="top" secondItem="tZI-oF-V2y" secondAttribute="bottom" constant="8" id="qmv-9M-CNE"/>
                             <constraint firstAttribute="centerX" secondItem="tZI-oF-V2y" secondAttribute="centerX" id="sWC-rt-FvP"/>
                             <constraint firstItem="fmq-le-YuS" firstAttribute="top" secondItem="2xW-qf-dxt" secondAttribute="bottom" constant="8" symbolic="YES" id="tgt-tf-euo"/>
                             <constraint firstItem="Ytt-Eb-R1C" firstAttribute="top" secondItem="kWL-aW-AVU" secondAttribute="bottom" constant="8" symbolic="YES" id="uUN-wx-2Qi"/>
@@ -306,73 +322,73 @@ important events in a game.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpB-cd-5EE">
-                                <rect key="frame" x="246" y="101" width="110" height="30"/>
+                                <rect key="frame" x="246" y="57" width="110" height="30"/>
                                 <state key="normal" title="15:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHI-dO-RIY">
-                                <rect key="frame" x="246" y="139" width="110" height="30"/>
+                                <rect key="frame" x="246" y="95" width="110" height="30"/>
                                 <state key="normal" title="10:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Period" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-Ul-Xw8">
-                                <rect key="frame" x="261" y="72" width="79" height="21"/>
+                                <rect key="frame" x="261" y="28" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czT-ed-ulH">
-                                <rect key="frame" x="246" y="177" width="110" height="30"/>
+                                <rect key="frame" x="246" y="133" width="110" height="30"/>
                                 <state key="normal" title="5:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lK-GC-YqP">
-                                <rect key="frame" x="246" y="244" width="110" height="30"/>
+                                <rect key="frame" x="246" y="200" width="110" height="30"/>
                                 <state key="normal" title="15:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhA-LX-2xu">
-                                <rect key="frame" x="246" y="282" width="110" height="30"/>
+                                <rect key="frame" x="246" y="238" width="110" height="30"/>
                                 <state key="normal" title="10:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfW-5W-rlu">
-                                <rect key="frame" x="246" y="320" width="110" height="30"/>
+                                <rect key="frame" x="246" y="276" width="110" height="30"/>
                                 <state key="normal" title="5:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewd-7r-lHu">
-                                <rect key="frame" x="246" y="387" width="110" height="30"/>
+                                <rect key="frame" x="246" y="343" width="110" height="30"/>
                                 <state key="normal" title="15:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXL-xI-eK1">
-                                <rect key="frame" x="246" y="425" width="110" height="30"/>
+                                <rect key="frame" x="246" y="381" width="110" height="30"/>
                                 <state key="normal" title="10:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3rd Period" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewo-Bd-cyc">
-                                <rect key="frame" x="261" y="358" width="80" height="21"/>
+                                <rect key="frame" x="261" y="314" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOU-is-dKa">
-                                <rect key="frame" x="246" y="463" width="110" height="30"/>
+                                <rect key="frame" x="246" y="419" width="110" height="30"/>
                                 <state key="normal" title="5:00 remaining">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Period" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMd-0R-ppw">
-                                <rect key="frame" x="259" y="215" width="84" height="21"/>
+                                <rect key="frame" x="259" y="171" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
