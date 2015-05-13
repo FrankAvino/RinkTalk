@@ -13,9 +13,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _arrPageTitles = @[@"What is a hit?",@"This is a hit.",@"This is not a hit."];
-    _arrPageDescriptions = @[@"There are certain things to look for.", @"He makes strong intentional contact with his shoulders.", @"It doesn't count if you miss."];
-    _arrPageImages =@[@"hip_check",@"hit",@"missed_hit"];
+    _arrPageTitles = @[@"Record a faceoff...",@"Record a penalty...",@"Record a goal..."];
+    _arrPageDescriptions = @[@"when the referee blows the whistle before a puck drop.", @"when a player enters the penalty box.", @"when the referee signifies a goal."];
+    _arrPageImages =@[@"faceoff",@"penaltybox",@"goal"];
     // Create page view controller
     self.PageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.PageViewController.dataSource = self;

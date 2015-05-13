@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dtP-jN-2CL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -152,18 +153,9 @@ important events in a game.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-le-YuS">
-                                <rect key="frame" x="215" y="100" width="170" height="30"/>
-                                <state key="normal" title="Neutral Zone Faceoffs">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kJ-H8-QL2" kind="show" id="53F-J5-exQ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xW-qf-dxt">
-                                <rect key="frame" x="215" y="62" width="170" height="30"/>
-                                <state key="normal" title="Offensive Zone Faceoffs">
+                                <rect key="frame" x="271" y="62" width="59" height="30"/>
+                                <state key="normal" title="Faceoffs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -176,17 +168,8 @@ important events in a game.</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZI-oF-V2y">
-                                <rect key="frame" x="215" y="138" width="170" height="30"/>
-                                <state key="normal" title="Defensive Zone Faceoffs">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kJ-H8-QL2" kind="show" id="Jas-DW-93k"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4N-DL-naw">
-                                <rect key="frame" x="269" y="176" width="63" height="30"/>
+                                <rect key="frame" x="269" y="100" width="63" height="30"/>
                                 <state key="normal" title="Penalties">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -201,7 +184,7 @@ important events in a game.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4U-3w-ymC">
-                                <rect key="frame" x="280" y="214" width="40" height="30"/>
+                                <rect key="frame" x="280" y="138" width="40" height="30"/>
                                 <state key="normal" title="Goals">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -211,51 +194,29 @@ important events in a game.</string>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="2xW-qf-dxt" secondAttribute="trailing" constant="202" id="0nS-Om-rno"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="250" id="0ns-jQ-fMY"/>
-                            <constraint firstItem="tZI-oF-V2y" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="15y-lg-Qxx"/>
                             <constraint firstItem="4zK-Uc-8nG" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" id="1wY-xh-ICs"/>
-                            <constraint firstItem="2xW-qf-dxt" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="7NS-FZ-5cZ"/>
                             <constraint firstAttribute="centerX" secondItem="2xW-qf-dxt" secondAttribute="centerX" id="7Og-q5-Srs"/>
                             <constraint firstItem="kWL-aW-AVU" firstAttribute="trailing" secondItem="RsD-M6-7D9" secondAttribute="trailingMargin" id="BuO-9F-MoP"/>
-                            <constraint firstItem="2xW-qf-dxt" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="KyL-OV-KpG"/>
+                            <constraint firstItem="O4N-DL-naw" firstAttribute="centerX" secondItem="2xW-qf-dxt" secondAttribute="centerX" id="F0I-hD-K19"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="M2T-NX-lKj"/>
-                            <constraint firstItem="tZI-oF-V2y" firstAttribute="width" secondItem="fmq-le-YuS" secondAttribute="width" id="MhV-X9-SNl"/>
-                            <constraint firstItem="v4U-3w-ymC" firstAttribute="centerX" secondItem="O4N-DL-naw" secondAttribute="centerX" constant="-0.5" id="NBk-Ev-8Ol"/>
-                            <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="0.5" id="NeE-c8-uiZ"/>
+                            <constraint firstItem="v4U-3w-ymC" firstAttribute="centerX" secondItem="O4N-DL-naw" secondAttribute="centerX" id="NBk-Ev-8Ol"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2xW-qf-dxt" secondAttribute="trailing" constant="250" id="O3p-Kr-QSV"/>
-                            <constraint firstItem="v4U-3w-ymC" firstAttribute="top" secondItem="O4N-DL-naw" secondAttribute="bottom" constant="8" id="OYa-iF-atj"/>
+                            <constraint firstItem="v4U-3w-ymC" firstAttribute="top" secondItem="O4N-DL-naw" secondAttribute="bottom" constant="8" symbolic="YES" id="OYa-iF-atj"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="85" id="S3I-zE-aX4"/>
-                            <constraint firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" id="SIj-f3-Fie"/>
-                            <constraint firstItem="tZI-oF-V2y" firstAttribute="top" secondItem="fmq-le-YuS" secondAttribute="bottom" constant="8" symbolic="YES" id="ScL-K7-fLh"/>
                             <constraint firstAttribute="centerX" secondItem="kWL-aW-AVU" secondAttribute="centerX" id="Tu6-TR-Gvq"/>
-                            <constraint firstItem="O4N-DL-naw" firstAttribute="centerX" secondItem="tZI-oF-V2y" secondAttribute="centerX" id="V5i-ki-cbn"/>
                             <constraint firstItem="4zK-Uc-8nG" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="8" symbolic="YES" id="WRD-fc-JCr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tZI-oF-V2y" secondAttribute="trailing" constant="250" id="Zem-Np-TLP"/>
-                            <constraint firstItem="tZI-oF-V2y" firstAttribute="centerX" secondItem="fmq-le-YuS" secondAttribute="centerX" constant="-0.5" id="cTx-W1-SzB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4zK-Uc-8nG" secondAttribute="trailing" id="cz1-OU-ez3"/>
-                            <constraint firstItem="fmq-le-YuS" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="dEJ-vY-HEg"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="4zK-Uc-8nG" secondAttribute="bottom" constant="8" symbolic="YES" id="eDN-2e-IEV"/>
-                            <constraint firstItem="tZI-oF-V2y" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="250" id="hna-Q7-wM5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fmq-le-YuS" secondAttribute="trailing" constant="202" id="pOs-63-hjA"/>
-                            <constraint firstItem="O4N-DL-naw" firstAttribute="top" secondItem="tZI-oF-V2y" secondAttribute="bottom" constant="8" id="qmv-9M-CNE"/>
-                            <constraint firstAttribute="centerX" secondItem="tZI-oF-V2y" secondAttribute="centerX" id="sWC-rt-FvP"/>
-                            <constraint firstItem="fmq-le-YuS" firstAttribute="top" secondItem="2xW-qf-dxt" secondAttribute="bottom" constant="8" symbolic="YES" id="tgt-tf-euo"/>
                             <constraint firstItem="Ytt-Eb-R1C" firstAttribute="top" secondItem="kWL-aW-AVU" secondAttribute="bottom" constant="8" symbolic="YES" id="uUN-wx-2Qi"/>
+                            <constraint firstItem="O4N-DL-naw" firstAttribute="top" secondItem="2xW-qf-dxt" secondAttribute="bottom" constant="8" symbolic="YES" id="vYX-op-Pxn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="0nS-Om-rno"/>
                                 <exclude reference="0ns-jQ-fMY"/>
-                                <exclude reference="7NS-FZ-5cZ"/>
                                 <exclude reference="M2T-NX-lKj"/>
                                 <exclude reference="O3p-Kr-QSV"/>
                                 <exclude reference="S3I-zE-aX4"/>
-                                <exclude reference="dEJ-vY-HEg"/>
-                                <exclude reference="pOs-63-hjA"/>
-                                <exclude reference="MhV-X9-SNl"/>
-                                <exclude reference="NeE-c8-uiZ"/>
-                                <exclude reference="Zem-Np-TLP"/>
-                                <exclude reference="cTx-W1-SzB"/>
-                                <exclude reference="hna-Q7-wM5"/>
                                 <exclude reference="Tu6-TR-Gvq"/>
                             </mask>
                         </variation>
@@ -791,19 +752,6 @@ important events in a game.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-n5-X4m" customClass="FLAnimatedImageView">
-                                <rect key="frame" x="77" y="136" width="446" height="328"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="328" id="3Eu-pr-1cg"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="328" id="Xg5-oI-8hU"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3Eu-pr-1cg"/>
-                                        <exclude reference="Xg5-oI-8hU"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-4b-Kzi">
                                 <rect key="frame" x="267" y="108" width="66" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -823,19 +771,37 @@ important events in a game.</string>
                                     <segue destination="K0h-aL-XvD" kind="custom" customClass="DismissSegue" id="GNe-An-T3Y"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-n5-X4m" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="61" y="136" width="478" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="328" id="3Eu-pr-1cg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="328" id="Xg5-oI-8hU"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3Eu-pr-1cg"/>
+                                        <exclude reference="Xg5-oI-8hU"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1fj-RF-wmT" firstAttribute="trailing" secondItem="B6P-Tp-sEP" secondAttribute="trailingMargin" id="3Rh-5X-fgy"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="1fj-RF-wmT" secondAttribute="centerX" id="81S-rb-4MP"/>
+                            <constraint firstItem="eng-06-BZh" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="136" id="9vP-q0-AtC"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="B6P-Tp-sEP" secondAttribute="centerX" id="BNM-o7-nRJ"/>
                             <constraint firstAttribute="centerX" secondItem="R1Q-jX-ac0" secondAttribute="centerX" id="C9S-TD-wvQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gjQ-n5-X4m" secondAttribute="trailing" constant="45" id="Ojc-pm-SQg"/>
                             <constraint firstItem="1fj-RF-wmT" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="8" symbolic="YES" id="WrN-HB-nhN"/>
-                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" constant="61" id="Wre-MF-JJe"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" constant="20" id="Wre-MF-JJe"/>
+                            <constraint firstItem="gYN-4b-Kzi" firstAttribute="top" secondItem="R1Q-jX-ac0" secondAttribute="bottom" constant="58" id="bA0-Kp-Kyl"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerX" secondItem="gYN-4b-Kzi" secondAttribute="centerX" id="bIf-jb-U4q"/>
                             <constraint firstItem="gYN-4b-Kzi" firstAttribute="centerX" secondItem="gjQ-n5-X4m" secondAttribute="centerX" id="dbu-5I-87Z"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="top" secondItem="gYN-4b-Kzi" secondAttribute="bottom" constant="8" symbolic="YES" id="eil-pC-TFf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gjQ-n5-X4m" secondAttribute="trailing" constant="61" id="hxv-q1-7Uz"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="leading" secondItem="B6P-Tp-sEP" secondAttribute="leadingMargin" constant="45" id="gKt-Wn-3oN"/>
+                            <constraint firstItem="gjQ-n5-X4m" firstAttribute="width" secondItem="B6P-Tp-sEP" secondAttribute="height" multiplier="22:25" id="hPH-0U-Y8B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gjQ-n5-X4m" secondAttribute="trailing" constant="20" id="hxv-q1-7Uz"/>
                             <constraint firstItem="eng-06-BZh" firstAttribute="top" secondItem="gjQ-n5-X4m" secondAttribute="bottom" constant="136" id="jRL-76-fFV"/>
                             <constraint firstItem="gjQ-n5-X4m" firstAttribute="centerY" secondItem="B6P-Tp-sEP" secondAttribute="centerY" id="usw-fo-X8J"/>
                             <constraint firstItem="R1Q-jX-ac0" firstAttribute="top" secondItem="jcy-oc-7fj" secondAttribute="bottom" id="xC7-bL-k54"/>
@@ -843,7 +809,12 @@ important events in a game.</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="81S-rb-4MP"/>
+                                <exclude reference="Wre-MF-JJe"/>
+                                <exclude reference="hPH-0U-Y8B"/>
+                                <exclude reference="hxv-q1-7Uz"/>
                                 <exclude reference="dbu-5I-87Z"/>
+                                <exclude reference="jRL-76-fFV"/>
                             </mask>
                         </variation>
                     </view>
@@ -860,6 +831,5 @@ important events in a game.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="GNe-An-T3Y"/>
-        <segue reference="53F-J5-exQ"/>
     </inferredMetricsTieBreakers>
 </document>

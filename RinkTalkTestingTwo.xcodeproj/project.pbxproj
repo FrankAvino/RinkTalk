@@ -22,6 +22,9 @@
 		BA6641FF1AF80F4D00B725B6 /* hip_check.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA6641FE1AF80F4D00B725B6 /* hip_check.gif */; };
 		BA6A13701AD1EBA900FC2429 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */; };
 		BAC1FDE61AD0586900E77405 /* GamesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC1FDE51AD0586900E77405 /* GamesListViewController.m */; };
+		BAE972881B03174B004D3FBD /* faceoff.gif in Resources */ = {isa = PBXBuildFile; fileRef = BAE972871B03174B004D3FBD /* faceoff.gif */; };
+		BAE9728A1B0318AC004D3FBD /* penaltybox.gif in Resources */ = {isa = PBXBuildFile; fileRef = BAE972891B0318AC004D3FBD /* penaltybox.gif */; };
+		BAE9728C1B031A9C004D3FBD /* goal.gif in Resources */ = {isa = PBXBuildFile; fileRef = BAE9728B1B031A9C004D3FBD /* goal.gif */; };
 		C82647C31AD397C700EF4081 /* GameEventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82647C21AD397C600EF4081 /* GameEventsListTableViewController.m */; };
 		C8EA13E71A7F438F00AF902A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA13E61A7F438F00AF902A /* main.m */; };
 		C8EA13EA1A7F438F00AF902A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EA13E91A7F438F00AF902A /* AppDelegate.m */; };
@@ -83,6 +86,9 @@
 		BA6A136F1AD1EBA900FC2429 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		BAC1FDE41AD0586900E77405 /* GamesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesListViewController.h; sourceTree = "<group>"; };
 		BAC1FDE51AD0586900E77405 /* GamesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesListViewController.m; sourceTree = "<group>"; };
+		BAE972871B03174B004D3FBD /* faceoff.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = faceoff.gif; sourceTree = "<group>"; };
+		BAE972891B0318AC004D3FBD /* penaltybox.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = penaltybox.gif; sourceTree = "<group>"; };
+		BAE9728B1B031A9C004D3FBD /* goal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = goal.gif; sourceTree = "<group>"; };
 		C82647C11AD397C600EF4081 /* GameEventsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEventsListTableViewController.h; sourceTree = "<group>"; };
 		C82647C21AD397C600EF4081 /* GameEventsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEventsListTableViewController.m; sourceTree = "<group>"; };
 		C8EA13E11A7F438F00AF902A /* RinkTalkTestingTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RinkTalkTestingTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				BA1058181AF744EC00F2D6D5 /* missed_hit.gif */,
+				BAE972871B03174B004D3FBD /* faceoff.gif */,
+				BAE972891B0318AC004D3FBD /* penaltybox.gif */,
+				BAE9728B1B031A9C004D3FBD /* goal.gif */,
 				BA5CE12D1AF8840E00845839 /* RinkBackground.jpg */,
 				BA6641FC1AF80D6400B725B6 /* RinkDiagram.gif */,
 				BA6641FE1AF80F4D00B725B6 /* hip_check.gif */,
@@ -391,9 +400,12 @@
 				BA1058191AF744EC00F2D6D5 /* missed_hit.gif in Resources */,
 				BA6641FF1AF80F4D00B725B6 /* hip_check.gif in Resources */,
 				C8EA14571A966CE900AF902A /* Launch Screen.xib in Resources */,
+				BAE972881B03174B004D3FBD /* faceoff.gif in Resources */,
+				BAE9728C1B031A9C004D3FBD /* goal.gif in Resources */,
 				BA6641FD1AF80D6400B725B6 /* RinkDiagram.gif in Resources */,
 				C8EA13F01A7F438F00AF902A /* Main.storyboard in Resources */,
 				BA5CE12E1AF8840E00845839 /* RinkBackground.jpg in Resources */,
+				BAE9728A1B0318AC004D3FBD /* penaltybox.gif in Resources */,
 				BA1058171AF742FD00F2D6D5 /* hit.gif in Resources */,
 				C8EA143D1A8C149700AF902A /* Media.xcassets in Resources */,
 			);
