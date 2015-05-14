@@ -22,11 +22,13 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"Test1");
     [super viewDidLoad];
     _eventsToShow = [[NSMutableArray alloc] init];
     _eventTimesToShow = [[NSMutableArray alloc] init];
     _eventRecordersToShow = [[NSMutableArray alloc] init];
     [self loadEvents];
+    NSLog(@"Test2");
 }
 
 - (void)loadEvents

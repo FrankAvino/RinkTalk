@@ -47,19 +47,24 @@
 
 // TODO make this just a view and not a button
 - (IBAction)recordEvent:(id)sender {
-    
+    NSLog(@"Test1");
     _eventsCount++;
     _hitsRecordedCount.text = [NSString stringWithFormat:@"Hits recorded: %d", _eventsCount];
-    
+      NSLog(@"Test2");
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
     _recordButton.backgroundColor = [UIColor colorWithRed:0.00 green:1.00 blue:0.00 alpha:1.0];
     [self performSelector:@selector(changeback) withObject:self afterDelay:0.5];
-    
+      NSLog(@"Test5");
     PFObject *Event = [PFUser objectWithClassName:@"Event"];
+    NSLog(@"Test6");
     
-    Event[@"type"] = _eventType;
+    
+    Event[@"type"] = _eventType; //error
+    NSLog(@"Test7");
     Event[@"game"] = _game;
+    
+    NSLog(@"Test3");
     
     if (!_guestName){
         Event[@"submittedBy"] = _userObj;
@@ -67,6 +72,8 @@
     else{
         Event[@"guestName"] = [@"(guest)" stringByAppendingString:_guestName];
     }
+    
+    NSLog(@"Test4");
     
     [Event saveInBackground];
     //NSLog(@"%@ recorded", _eventType);
