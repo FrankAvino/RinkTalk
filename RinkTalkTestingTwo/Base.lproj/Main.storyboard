@@ -154,7 +154,7 @@ important events in a game.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xW-qf-dxt">
-                                <rect key="frame" x="271" y="62" width="59" height="30"/>
+                                <rect key="frame" x="271" y="61" width="59" height="30"/>
                                 <state key="normal" title="Faceoffs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -163,14 +163,14 @@ important events in a game.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which event type would you like to record?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="4zK-Uc-8nG">
-                                <rect key="frame" x="16" y="28" width="568" height="26"/>
+                                <rect key="frame" x="16" y="28" width="568" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4N-DL-naw">
-                                <rect key="frame" x="269" y="100" width="63" height="30"/>
-                                <state key="normal" title="Penalties">
+                                <rect key="frame" x="232" y="99" width="137" height="30"/>
+                                <state key="normal" title="Goals and Penalties">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -186,15 +186,6 @@ important events in a game.</string>
                                     <segue destination="EAs-uu-8Vp" kind="show" identifier="Admin Login" id="dH4-aa-80J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4U-3w-ymC">
-                                <rect key="frame" x="280" y="138" width="40" height="30"/>
-                                <state key="normal" title="Goals">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kJ-H8-QL2" kind="show" id="k6X-Tp-Gp9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -205,9 +196,7 @@ important events in a game.</string>
                             <constraint firstItem="kWL-aW-AVU" firstAttribute="trailing" secondItem="RsD-M6-7D9" secondAttribute="trailingMargin" id="BuO-9F-MoP"/>
                             <constraint firstItem="O4N-DL-naw" firstAttribute="centerX" secondItem="2xW-qf-dxt" secondAttribute="centerX" id="F0I-hD-K19"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="leading" secondItem="RsD-M6-7D9" secondAttribute="leadingMargin" constant="203" id="M2T-NX-lKj"/>
-                            <constraint firstItem="v4U-3w-ymC" firstAttribute="centerX" secondItem="O4N-DL-naw" secondAttribute="centerX" id="NBk-Ev-8Ol"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2xW-qf-dxt" secondAttribute="trailing" constant="250" id="O3p-Kr-QSV"/>
-                            <constraint firstItem="v4U-3w-ymC" firstAttribute="top" secondItem="O4N-DL-naw" secondAttribute="bottom" constant="8" symbolic="YES" id="OYa-iF-atj"/>
                             <constraint firstItem="2xW-qf-dxt" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="85" id="S3I-zE-aX4"/>
                             <constraint firstAttribute="centerX" secondItem="kWL-aW-AVU" secondAttribute="centerX" id="Tu6-TR-Gvq"/>
                             <constraint firstItem="4zK-Uc-8nG" firstAttribute="top" secondItem="OW0-kS-UKB" secondAttribute="bottom" constant="8" symbolic="YES" id="WRD-fc-JCr"/>
