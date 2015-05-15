@@ -19,7 +19,7 @@
     _eventTypes = [[NSMutableDictionary alloc] init];
     [_eventTypes setValue:@"Hit" forKey:@"Hits"];
     [_eventTypes setValue:@"Faceoff" forKey:@"Faceoffs"];
-    [_eventTypes setValue:@"Goal or Penalty" forKey:@"Goals and Penalties"];
+    [_eventTypes setValue:@"Goal/Penalty" forKey:@"Goals and Penalties"];
 }
 
 #pragma mark - Navigation

@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 
 @interface GamesListViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *gameSelectBtn;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @end
 
@@ -32,6 +33,7 @@
 }
 
 - (void)viewDidLoad{
+    _gameSelectBtn.hidden = true;
     [_spinner startAnimating];
     
     NSDate *now = [NSDate date];
@@ -56,6 +58,7 @@
         }
         
         [_spinner stopAnimating];
+        _gameSelectBtn.hidden = false;
     }];
 }
 
